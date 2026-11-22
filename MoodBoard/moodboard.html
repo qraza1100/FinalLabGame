@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Drowned Sanctum – Mood Board</title>
+<style>
+@font-face{font-family:Cinzel;src:url(src/Cinzel.ttf) format('truetype');font-weight:400 900}
+@font-face{font-family:Exo2;src:url(src/Exo2.ttf) format('truetype');font-weight:100 900}
+:root{--abyss:#0B1A2A;--teal:#0F4C5C;--stone:#5E6B5A;--cyan:#3DF5E0;--pearl:#F2EFE6;--amber:#FFB43A;--coral:#FF4D4D;--line:rgba(61,245,224,.22);--muted:#9fbcc3}
+@page{size:1920px 1280px;margin:0}
+html,body{margin:0;background:#050b12}
+body{width:1920px;height:1280px;overflow:hidden;font-family:Exo2,'Segoe UI',sans-serif;color:var(--pearl);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.board{box-sizing:border-box;width:1920px;height:1280px;padding:24px 28px 20px;display:grid;grid-template-columns:1130px 712px;grid-template-rows:600px 540px 56px;gap:18px 22px;
+  background:radial-gradient(1100px 700px at 25% -10%,#12405a 0%,rgba(8,19,31,0) 70%),radial-gradient(900px 600px at 100% 100%,#0d2a3a 0%,rgba(8,19,31,0) 70%),linear-gradient(180deg,#081521,#050b12)}
+.panel{position:relative;box-sizing:border-box;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(19,52,70,.8),rgba(9,25,37,.88));box-shadow:0 12px 30px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.05);padding:12px 16px 14px}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:5px 18px 6px 14px;border-radius:999px;background:linear-gradient(90deg,#14768b,#0F4C5C 85%);border:1px solid rgba(61,245,224,.5);font-family:Cinzel;font-weight:700;font-size:19px;letter-spacing:.03em;color:var(--pearl);box-shadow:0 0 18px rgba(61,245,224,.16);white-space:nowrap}
+.pill::before{content:'';width:9px;height:9px;transform:rotate(45deg);background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+
+/* hero */
+.hero{padding:0;overflow:hidden}
+.hero svg.scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero .pill{position:absolute;top:16px;left:18px;z-index:2}
+.titleblock{position:absolute;left:40px;top:76px;z-index:2}
+.kicker{font-size:14px;letter-spacing:.34em;color:var(--cyan);font-weight:700;text-transform:uppercase;text-shadow:0 2px 6px rgba(0,0,0,.6)}
+h1{margin:8px 0 14px;font-family:Cinzel;font-weight:900;font-size:82px;line-height:.92;letter-spacing:.02em;
+  background:linear-gradient(180deg,#ffffff 0%,#F2EFE6 45%,#8ff4ea 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 3px 0 rgba(3,16,24,.95)) drop-shadow(0 0 22px rgba(61,245,224,.35))}
+.tagline{display:inline-block;padding:8px 18px;border-radius:999px;background:rgba(4,16,26,.74);border:1px solid rgba(61,245,224,.42);font-weight:600;font-size:18px;letter-spacing:.04em}
+.tagline i{font-style:normal;color:var(--cyan);margin:0 6px}
+.heroChips{position:absolute;left:18px;bottom:16px;display:flex;gap:10px;z-index:2}
+.chip{padding:5px 12px;border-radius:8px;background:rgba(4,16,26,.78);border:1px solid rgba(61,245,224,.3);font-size:14px;font-weight:600;color:#d3ecef}
+.chip b{color:var(--amber);font-weight:700}
+
+/* right top */
+.rightTop{display:grid;grid-template-rows:284px 140px 1fr;gap:14px;min-height:0}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:10px}
+.card{border-radius:14px;background:linear-gradient(180deg,rgba(30,82,104,.6),rgba(8,28,42,.85));border:1px solid rgba(61,245,224,.2);text-align:center;padding:9px 8px 10px;height:202px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center}
+.card h3{margin:0;font-family:Cinzel;font-weight:700;font-size:16px;letter-spacing:.02em}
+.card .sub{font-size:13px;color:var(--cyan);margin-top:2px;font-weight:600}
+.card svg{width:100%;height:104px;margin-top:6px;flex:none}
+.card .note{font-size:12.5px;color:#cfe3e6;margin-top:4px;line-height:1.25}
+.swatches{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:10px}
+.sw{display:flex;flex-direction:column;align-items:center;text-align:center}
+.sw .dot{width:34px;height:34px;border-radius:50%;border:2px solid rgba(255,255,255,.25);box-shadow:0 0 14px rgba(0,0,0,.4)}
+.sw .nm{font-size:12.5px;font-weight:700;margin-top:4px;line-height:1.1}
+.sw .hx{font-size:11.5px;color:var(--muted);letter-spacing:.03em}
+.assets .row{display:grid;grid-template-columns:repeat(3,76px) 1fr;gap:10px;margin-top:10px;align-items:start}
+.tile{position:relative;width:76px;height:76px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.18)}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,76,92,0) 30%,rgba(15,76,92,.55))}
+.tile span{position:absolute;left:0;right:0;bottom:3px;font-size:11px;font-weight:700;text-align:center;z-index:1;text-shadow:0 1px 3px #000}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:3px 12px;font-size:12.5px;line-height:1.25;color:#d6e8eb}
+.list b{color:var(--cyan);font-weight:700}
+.list .free{grid-column:1/-1;color:var(--amber);font-weight:700;margin-top:2px}
+
+/* storyboard */
+.frames{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:12px;margin-top:10px;height:452px}
+.frame{position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(61,245,224,.25);background:#06121b;display:flex;flex-direction:column}
+.fhead{height:32px;display:flex;align-items:center;gap:9px;padding:0 10px;background:linear-gradient(90deg,rgba(20,118,139,.55),rgba(15,76,92,.15));border-bottom:1px solid rgba(61,245,224,.2);flex:none}
+.num{width:22px;height:22px;border-radius:50%;background:var(--pearl);color:#0B1A2A;font-weight:800;font-size:13px;display:grid;place-items:center}
+.fhead b{font-family:Cinzel;font-size:15px;font-weight:700;letter-spacing:.02em}
+.fbody{position:relative;flex:1}
+.fbody svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.cap{position:absolute;left:10px;right:10px;bottom:8px;padding:4px 8px;border-radius:8px;background:rgba(4,12,19,.86);border:1px solid rgba(61,245,224,.25);font-size:13px;font-weight:600;text-align:center;line-height:1.25}
+
+/* right bottom */
+.rightBottom{display:grid;grid-template-rows:112px 256px 144px;gap:14px;min-height:0}
+.desc p{margin:8px 2px 0;font-size:15.5px;line-height:1.38;color:#e3eef0}
+.desc p b{color:var(--amber)}
+.row2{display:grid;grid-template-columns:372px 1fr;gap:14px;min-height:0}
+.row3{display:grid;grid-template-columns:1fr 1fr;gap:14px;min-height:0}
+ul.checks{list-style:none;margin:8px 0 0;padding:0;font-size:14.2px;line-height:1.2}
+ul.checks li{display:flex;gap:9px;align-items:center;margin:0 0 5px}
+ul.checks li::before{content:'✓';flex:none;width:17px;height:17px;border-radius:50%;background:#1fbf9c;color:#04201a;font-weight:900;font-size:11px;display:grid;place-items:center}
+ul.checks b{color:var(--cyan)}
+ul.checks .lose b{color:var(--coral)}
+.hudbox{margin-top:10px;background:rgba(3,12,20,.82);border:1px solid rgba(61,245,224,.38);border-radius:10px;padding:9px 11px;font-size:13px;box-shadow:inset 0 0 18px rgba(61,245,224,.08)}
+.hrow{display:flex;align-items:center;gap:8px;margin:5px 0}
+.hrow .lbl{width:60px;color:var(--cyan);font-weight:800;letter-spacing:.04em}
+.bar{flex:1;height:9px;border-radius:5px;background:#0F4C5C;overflow:hidden}
+.bar i{display:block;height:100%;width:72%;background:linear-gradient(90deg,#1fbf9c,#3DF5E0);box-shadow:0 0 8px #3DF5E0}
+.top{display:flex;justify-content:space-between;font-weight:700;letter-spacing:.06em;font-size:12px;color:#cfe3e6;border-bottom:1px solid rgba(61,245,224,.2);padding-bottom:5px}
+.top b{color:var(--amber)}
+.timer{margin-top:7px;text-align:center;padding:4px;border-radius:7px;border:1px solid var(--coral);color:#ff8a5c;font-weight:800;font-size:16px;letter-spacing:.08em;background:rgba(40,6,10,.7);box-shadow:0 0 12px rgba(255,77,77,.3)}
+.menu{font-size:12px;color:var(--muted);margin-top:7px;line-height:1.3}
+.menu b{color:#d6e8eb}
+.small p{margin:8px 0 0;font-size:13.4px;line-height:1.35;color:#dcebee}
+.small p b{color:var(--cyan)}
+.pts{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.pts span{font-size:12px;font-weight:700;padding:1px 7px;border-radius:6px;background:rgba(61,245,224,.1);border:1px solid rgba(61,245,224,.28)}
+.pts span.neg{background:rgba(255,77,77,.12);border-color:rgba(255,77,77,.45);color:#ff9a8a}
+.moods{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.moods span{font-size:12.5px;font-weight:700;padding:2px 9px;border-radius:999px;background:rgba(255,180,58,.12);border:1px solid rgba(255,180,58,.45);color:#ffd28a}
+
+/* footer */
+.foot{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(61,245,224,.35);padding:0 6px}
+.foot .who{font-size:18px;color:#dbe9ec}
+.foot .who b{color:#fff;font-weight:800}
+.foot .who span{color:rgba(61,245,224,.6);margin:0 12px}
+.foot .tools{font-size:14px;color:var(--muted)}
+.foot .tools b{color:var(--cyan)}
+</style>
+</head>
+<body>
+
+<!-- ============ shared SVG defs ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a8ea6"/><stop offset=".3" stop-color="#136179"/><stop offset=".62" stop-color="#0b3346"/><stop offset="1" stop-color="#051019"/></linearGradient>
+  <radialGradient id="gSurface" cx=".5" cy="0" r=".7"><stop offset="0" stop-color="#b4fff4" stop-opacity=".35"/><stop offset="1" stop-color="#b4fff4" stop-opacity="0"/></radialGradient>
+  <linearGradient id="gShaft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d8fffa" stop-opacity=".6"/><stop offset="1" stop-color="#d8fffa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="gLamp" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff6cf" stop-opacity=".8"/><stop offset="1" stop-color="#fff6cf" stop-opacity="0"/></linearGradient>
+  <linearGradient id="gSand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d5048"/><stop offset="1" stop-color="#16231f"/></linearGradient>
+  <linearGradient id="gStoneCol" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1d3034"/><stop offset=".35" stop-color="#4f6c6e"/><stop offset=".7" stop-color="#3a5357"/><stop offset="1" stop-color="#1a2b2f"/></linearGradient>
+  <linearGradient id="gStoneColH" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#557476"/><stop offset="1" stop-color="#1f3236"/></linearGradient>
+  <linearGradient id="gStone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7f8d79"/><stop offset="1" stop-color="#3f4b3e"/></linearGradient>
+  <linearGradient id="gBrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD983"/><stop offset=".45" stop-color="#E9A23B"/><stop offset="1" stop-color="#7f4c14"/></linearGradient>
+  <linearGradient id="gBrass2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5C060"/><stop offset="1" stop-color="#A8691F"/></linearGradient>
+  <linearGradient id="gBrassH" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7f4c14"/><stop offset=".5" stop-color="#F2B24E"/><stop offset="1" stop-color="#7f4c14"/></linearGradient>
+  <radialGradient id="gPort" cx=".42" cy=".4" r=".6"><stop offset="0" stop-color="#E4FFFB"/><stop offset=".45" stop-color="#3DF5E0"/><stop offset="1" stop-color="#0F4C5C"/></radialGradient>
+  <linearGradient id="gHeart" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE9A6"/><stop offset=".45" stop-color="#FFB43A"/><stop offset="1" stop-color="#B8560E"/></linearGradient>
+  <radialGradient id="gHeartGlow"><stop offset="0" stop-color="#FFB43A" stop-opacity=".8"/><stop offset=".45" stop-color="#FFB43A" stop-opacity=".28"/><stop offset="1" stop-color="#FFB43A" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gCyanGlow"><stop offset="0" stop-color="#3DF5E0" stop-opacity=".7"/><stop offset=".5" stop-color="#3DF5E0" stop-opacity=".2"/><stop offset="1" stop-color="#3DF5E0" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gPearl" cx=".38" cy=".34" r=".7"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#efe9da"/><stop offset="1" stop-color="#a9a18c"/></radialGradient>
+  <radialGradient id="gUrchin" cx=".4" cy=".38" r=".65"><stop offset="0" stop-color="#9a4479"/><stop offset=".7" stop-color="#4a1c3d"/><stop offset="1" stop-color="#2a0f22"/></radialGradient>
+  <radialGradient id="gVig" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#020a10" stop-opacity="0"/><stop offset="1" stop-color="#020a10" stop-opacity=".82"/></radialGradient>
+  <radialGradient id="gHole"><stop offset="0" stop-color="#000"/><stop offset=".5" stop-color="#000"/><stop offset="1" stop-color="#fff"/></radialGradient>
+  <linearGradient id="gDarkR" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#02080d" stop-opacity="0"/><stop offset="1" stop-color="#02080d" stop-opacity=".78"/></linearGradient>
+  <linearGradient id="gRedRoom" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#40191e"/><stop offset="1" stop-color="#110608"/></linearGradient>
+  <radialGradient id="gRedVig" cx=".5" cy=".45" r=".75"><stop offset=".45" stop-color="#FF4D4D" stop-opacity="0"/><stop offset="1" stop-color="#FF4D4D" stop-opacity=".5"/></radialGradient>
+  <linearGradient id="gExit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4fff8"/><stop offset=".55" stop-color="#6cc9d1"/><stop offset="1" stop-color="#1b7590"/></linearGradient>
+  <linearGradient id="gLose" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a1218"/><stop offset="1" stop-color="#0c0306"/></linearGradient>
+
+  <filter id="fGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="fBlur8" x="-30%" y="-10%" width="160%" height="120%"><feGaussianBlur stdDeviation="8"/></filter>
+  <filter id="fBlur3" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>
+  <filter id="fShadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000" flood-opacity=".55"/></filter>
+
+  <mask id="mMoon" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="76"><rect width="60" height="76" fill="#fff"/><circle cx="37" cy="32" r="13" fill="#000"/></mask>
+
+  <!-- explorer sub, side view, facing right. lamp at (178,62) -->
+  <symbol id="sub" viewBox="0 0 200 110">
+    <rect x="14" y="55" width="26" height="6" fill="#6b4512"/>
+    <g transform="translate(15,58)"><ellipse cx="0" cy="-12" rx="5" ry="13" fill="#d8993a"/><ellipse cx="0" cy="12" rx="5" ry="13" fill="#a46d22"/><circle r="5" fill="#6b4512"/></g>
+    <polygon points="46,56 24,30 39,30 60,52" fill="#c4842e"/>
+    <polygon points="46,62 24,88 39,88 60,66" fill="#9a6220"/>
+    <ellipse cx="106" cy="60" rx="70" ry="33" fill="url(#gBrass)"/>
+    <path d="M40,64 Q106,104 172,64 Q160,92 106,93 Q52,92 40,64 Z" fill="#000" opacity=".18"/>
+    <path d="M80,34 L84,14 Q86,8 93,8 L119,8 Q126,8 127,14 L131,34 Z" fill="url(#gBrass2)"/>
+    <path d="M112,8 V2 H124" stroke="#6b4512" stroke-width="3" fill="none"/>
+    <path d="M44,67 Q106,85 172,67" stroke="#0F4C5C" stroke-width="6" fill="none"/>
+    <circle cx="132" cy="54" r="14" fill="#5b3a0f"/><circle cx="132" cy="54" r="10" fill="url(#gPort)"/><ellipse cx="128" cy="50" rx="3.5" ry="2.2" fill="#fff" opacity=".85"/>
+    <circle cx="99" cy="54" r="9" fill="#5b3a0f"/><circle cx="99" cy="54" r="6" fill="url(#gPort)"/>
+    <circle cx="72" cy="56" r="6" fill="#5b3a0f"/><circle cx="72" cy="56" r="3.8" fill="url(#gPort)"/>
+    <g fill="#ffe7b0" opacity=".75"><circle cx="58" cy="44" r="1.6"/><circle cx="80" cy="38" r="1.6"/><circle cx="150" cy="38" r="1.6"/><circle cx="164" cy="48" r="1.6"/><circle cx="60" cy="76" r="1.6"/><circle cx="150" cy="80" r="1.6"/></g>
+    <rect x="166" y="55" width="11" height="14" rx="3" fill="#6b4512"/>
+    <circle cx="178" cy="62" r="11" fill="#fff3c4" opacity=".28"/><circle cx="178" cy="62" r="6" fill="#fff6d6"/>
+    <polygon points="104,86 90,102 124,96 118,86" fill="#9a6220"/>
+    <path d="M62,40 Q100,24 150,38" stroke="#fff6d8" stroke-width="4" fill="none" opacity=".4" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- explorer sub, top-down, nose up. lamp at (30,9) -->
+  <symbol id="subTop" viewBox="0 0 60 100">
+    <polygon points="15,76 2,94 22,88" fill="#9a6220"/><polygon points="45,76 58,94 38,88" fill="#9a6220"/>
+    <rect x="26" y="86" width="8" height="10" fill="#6b4512"/><ellipse cx="30" cy="96" rx="13" ry="3" fill="#d8993a"/>
+    <rect x="13" y="8" width="34" height="82" rx="17" fill="url(#gBrassH)"/>
+    <ellipse cx="30" cy="48" rx="10" ry="16" fill="#b8792a"/>
+    <circle cx="30" cy="25" r="6" fill="url(#gPort)"/>
+    <circle cx="30" cy="9" r="4.5" fill="#fff6d6"/>
+  </symbol>
+
+  <symbol id="heart" viewBox="0 0 120 120">
+    <circle cx="60" cy="62" r="58" fill="url(#gHeartGlow)"/>
+    <path d="M60,100 L20,58 Q6,40 20,26 Q38,10 60,32 Q82,10 100,26 Q114,40 100,58 Z" fill="url(#gHeart)" stroke="#ffe7a8" stroke-width="2"/>
+    <g stroke="#fff4cf" stroke-opacity=".55" stroke-width="1.5" fill="none"><path d="M60,32 L60,100 M22,30 L60,56 L98,30 M13,44 L60,56 L107,44 M36,80 L60,56 L84,80"/></g>
+    <path d="M28,32 Q36,21 48,27" stroke="#fff" fill="none" stroke-width="3" opacity=".85" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="tablet" viewBox="0 0 60 76">
+    <rect x="2" y="2" width="56" height="72" rx="12" fill="url(#gStone)" stroke="#97a592" stroke-width="2"/>
+    <rect x="8" y="8" width="44" height="60" rx="8" fill="none" stroke="#2c372b" stroke-width="2" opacity=".6"/>
+  </symbol>
+  <symbol id="glyphMoon" viewBox="0 0 60 76"><g filter="url(#fGlow)"><circle cx="30" cy="38" r="15" fill="#3DF5E0" mask="url(#mMoon)"/></g></symbol>
+  <symbol id="glyphSun" viewBox="0 0 60 76"><g filter="url(#fGlow)" stroke="#3DF5E0" stroke-width="3" stroke-linecap="round"><circle cx="30" cy="38" r="7.5" fill="#3DF5E0" stroke="none"/><path d="M42,38 H47 M38.5,46.5 L42,50 M30,50 V55 M21.5,46.5 L18,50 M18,38 H13 M21.5,29.5 L18,26 M30,26 V21 M38.5,29.5 L42,26"/></g></symbol>
+  <symbol id="glyphStar" viewBox="0 0 60 76"><g filter="url(#fGlow)"><polygon points="30,22 33.8,32.7 45.2,33.1 36.2,40 39.4,50.9 30,44.5 20.6,50.9 23.8,40 14.8,33.1 26.2,32.7" fill="#3DF5E0"/></g></symbol>
+  <symbol id="sigilMoon" viewBox="0 0 60 76"><use href="#tablet" width="60" height="76"/><use href="#glyphMoon" width="60" height="76"/></symbol>
+  <symbol id="sigilSun" viewBox="0 0 60 76"><use href="#tablet" width="60" height="76"/><use href="#glyphSun" width="60" height="76"/></symbol>
+  <symbol id="sigilStar" viewBox="0 0 60 76"><use href="#tablet" width="60" height="76"/><use href="#glyphStar" width="60" height="76"/></symbol>
+  <symbol id="sigilDim" viewBox="0 0 60 76"><use href="#tablet" width="60" height="76"/><circle cx="30" cy="38" r="9" fill="none" stroke="#2c372b" stroke-width="3"/></symbol>
+
+  <symbol id="pearl" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5" fill="url(#gPearl)"/><circle cx="7" cy="7" r="2.4" fill="#fff" opacity=".9"/></symbol>
+
+  <symbol id="urchin" viewBox="0 0 100 100">
+    <g id="uSpikes" stroke="#3a1430" stroke-width="3.2" stroke-linecap="round"></g>
+    <circle cx="50" cy="50" r="22" fill="url(#gUrchin)"/>
+    <ellipse cx="43" cy="42" rx="7" ry="4" fill="#fff" opacity=".18"/>
+  </symbol>
+
+  <!-- guardian shark, facing right -->
+  <symbol id="shark" viewBox="0 0 200 80">
+    <g fill="#0a2430" stroke="#2a5a6a" stroke-width="1.5" stroke-linejoin="round">
+      <path d="M2,16 L28,38 L2,66 L14,40 Z"/>
+      <path d="M22,40 Q42,30 72,29 L86,6 L100,28 Q150,26 178,36 Q196,42 198,46 Q188,52 172,53 Q140,58 102,55 L86,72 L78,55 Q46,54 22,44 Z"/>
+    </g>
+    <circle cx="176" cy="41" r="7" fill="#FF4D4D" opacity=".3"/><circle cx="176" cy="41" r="2.6" fill="#FF4D4D"/>
+  </symbol>
+
+  <symbol id="fish" viewBox="0 0 36 20"><path d="M0,10 Q12,0 26,6 L35,0 L33,10 L35,20 L26,14 Q12,20 0,10 Z" fill="currentColor"/></symbol>
+
+  <symbol id="vent" viewBox="0 0 60 60">
+    <circle cx="30" cy="30" r="27" fill="url(#gCyanGlow)"/>
+    <circle cx="30" cy="30" r="17" fill="#3b4a3d" stroke="#7d8c79" stroke-width="3"/>
+    <circle cx="30" cy="30" r="10" fill="url(#gPort)"/>
+    <g fill="none" stroke="#e8fffb" stroke-width="1.5" opacity=".8"><circle cx="46" cy="14" r="3"/><circle cx="52" cy="24" r="2"/><circle cx="12" cy="12" r="2.5"/></g>
+  </symbol>
+</defs>
+</svg>
+
+<div class="board">
+
+  <!-- ============ HERO ============ -->
+  <section class="panel hero">
+    <svg class="scene" viewBox="0 0 1130 600" preserveAspectRatio="xMidYMid slice">
+      <rect width="1130" height="600" fill="url(#gWater)"/>
+      <ellipse cx="560" cy="-30" rx="720" ry="230" fill="url(#gSurface)"/>
+      <g filter="url(#fBlur8)" opacity=".6">
+        <polygon points="170,0 250,0 430,600 300,600" fill="url(#gShaft)"/>
+        <polygon points="430,0 470,0 570,600 510,600" fill="url(#gShaft)"/>
+        <polygon points="640,0 740,0 880,600 770,600" fill="url(#gShaft)"/>
+        <polygon points="900,0 935,0 1010,600 965,600" fill="url(#gShaft)"/>
+      </g>
+      <!-- far ruins -->
+      <g fill="#0d3343" opacity=".9">
+        <rect x="142" y="236" width="50" height="14"/><rect x="150" y="250" width="34" height="270"/>
+        <rect x="232" y="332" width="28" height="190"/><polygon points="232,332 238,318 246,328 254,312 260,332"/>
+        <rect x="330" y="380" width="24" height="140"/><polygon points="330,380 336,368 344,376 354,366 354,380"/>
+      </g>
+      <!-- shark guardian, far -->
+      <g transform="translate(1090,52) scale(-1.1,1.1)" opacity=".92"><use href="#shark" width="200" height="80"/></g>
+      <!-- temple -->
+      <g>
+        <rect x="520" y="380" width="520" height="130" fill="#123f4e"/>
+        <rect x="560" y="312" width="440" height="70" fill="#11394a"/>
+        <rect x="602" y="252" width="356" height="62" fill="#103646"/>
+        <rect x="652" y="200" width="256" height="54" fill="#0f3242"/>
+        <rect x="716" y="156" width="128" height="46" fill="#0e2f3e"/>
+        <polygon points="700,158 780,116 860,158" fill="#0e2f3e"/>
+        <g stroke="#2f7d91" stroke-width="2" opacity=".7"><path d="M520,380 H1040 M560,312 H1000 M602,252 H958 M652,200 H908 M700,158 L780,116 L860,158"/></g>
+        <g fill="#1a4f61"><rect x="538" y="392" width="22" height="118"/><rect x="584" y="392" width="22" height="118"/><rect x="954" y="392" width="22" height="118"/><rect x="1000" y="392" width="22" height="118"/></g>
+        <g fill="#225e72"><rect x="533" y="386" width="32" height="8"/><rect x="579" y="386" width="32" height="8"/><rect x="949" y="386" width="32" height="8"/><rect x="995" y="386" width="32" height="8"/></g>
+        <g stroke="#3DF5E0" stroke-width="2.2" fill="none" opacity=".85" filter="url(#fGlow)">
+          <circle cx="600" cy="347" r="6"/><path d="M622,353 L630,339 L638,353 Z"/><path d="M652,343 q5,-5 10,0 t10,0 M652,351 q5,-5 10,0 t10,0"/><path d="M688,339 v16 M696,339 v16 M704,339 v16"/>
+          <path d="M850,339 v16 M858,339 v16 M866,339 v16"/><path d="M882,343 q5,-5 10,0 t10,0 M882,351 q5,-5 10,0 t10,0"/><path d="M914,353 L922,339 L930,353 Z"/><circle cx="952" cy="347" r="6"/>
+          <path d="M752,228 Q780,208 808,228 Q780,248 752,228 Z"/>
+          <circle cx="780" cy="228" r="5" fill="#3DF5E0"/>
+          <path d="M770,140 L780,130 L790,140"/>
+        </g>
+        <path d="M735,510 L735,352 Q735,306 780,302 Q825,306 825,352 L825,510 Z" fill="#02090f" stroke="#2f7d91" stroke-width="4"/>
+      </g>
+      <!-- depth haze -->
+      <rect width="1130" height="600" fill="#0F4C5C" opacity=".2"/>
+      <!-- heart in doorway -->
+      <circle cx="780" cy="420" r="120" fill="url(#gHeartGlow)"/>
+      <use href="#heart" x="744" y="386" width="72" height="72"/>
+      <!-- fish school -->
+      <g style="color:#0a2b39" opacity=".9">
+        <use href="#fish" x="520" y="176" width="30" height="17"/><use href="#fish" x="556" y="164" width="26" height="15"/><use href="#fish" x="572" y="192" width="30" height="17"/>
+        <use href="#fish" x="540" y="204" width="24" height="14"/><use href="#fish" x="600" y="178" width="26" height="15"/><use href="#fish" x="612" y="204" width="22" height="13"/>
+      </g>
+      <!-- seabed -->
+      <path d="M0,500 Q150,470 300,492 T600,488 T900,494 T1130,480 V600 H0 Z" fill="url(#gSand)"/>
+      <polygon points="728,494 832,494 940,600 620,600" fill="#25363a" opacity=".85"/>
+      <g stroke="#3a5054" stroke-width="2" opacity=".8"><path d="M712,512 H848 M690,536 H870 M662,566 H898 M780,494 V600"/></g>
+      <path d="M0,552 Q200,532 420,550 T840,548 T1130,542 V600 H0 Z" fill="#132022"/>
+      <!-- fallen column -->
+      <g transform="rotate(-6 250 530)"><rect x="120" y="512" width="250" height="44" rx="4" fill="url(#gStoneColH)"/><g stroke="#000" stroke-opacity=".15" stroke-width="3"><path d="M120,524 H370 M120,540 H370"/></g><ellipse cx="370" cy="534" rx="11" ry="22" fill="#5d7c7e"/></g>
+      <!-- standing broken column -->
+      <g>
+        <rect x="1046" y="214" width="68" height="330" fill="url(#gStoneCol)"/>
+        <g stroke="#000" stroke-opacity=".16" stroke-width="3"><path d="M1060,224 V540 M1074,224 V540 M1088,224 V540 M1102,224 V540"/></g>
+        <polygon points="1046,216 1054,196 1064,208 1076,186 1088,204 1100,190 1114,210 1114,216" fill="#3d5a5e"/>
+        <rect x="1034" y="530" width="92" height="26" fill="#2b4246"/>
+        <path d="M1046,250 q10,-8 20,0 q8,6 16,-2" stroke="#2f8a5f" stroke-width="5" fill="none"/>
+      </g>
+      <!-- lamp cone + sub -->
+      <polygon points="505,355 505,368 780,488 780,286" fill="url(#gLamp)" opacity=".55" filter="url(#fBlur3)"/>
+      <g transform="translate(300,290) scale(1.15)"><use href="#sub" width="200" height="110"/></g>
+      <g fill="rgba(255,255,255,.08)" stroke="#e6fffb" stroke-width="1.6" opacity=".8">
+        <circle cx="306" cy="338" r="5"/><circle cx="294" cy="314" r="7"/><circle cx="304" cy="290" r="4"/><circle cx="290" cy="266" r="6"/><circle cx="300" cy="242" r="3"/>
+      </g>
+      <!-- seaweed + coral -->
+      <g fill="none" stroke-linecap="round">
+        <path d="M60,570 C46,520 82,490 66,440 C54,402 78,370 70,336" stroke="#1f8a70" stroke-width="8"/>
+        <path d="M84,570 C92,530 64,510 80,470 C92,440 74,420 84,390" stroke="#27a088" stroke-width="6"/>
+        <path d="M470,560 C480,520 455,500 470,470 C482,446 466,430 474,410" stroke="#1a6f5f" stroke-width="6"/>
+        <path d="M1000,570 C988,530 1016,506 1002,470" stroke="#27a088" stroke-width="6"/>
+        <path d="M640,566 C648,540 632,526 642,506" stroke="#27a088" stroke-width="5"/>
+      </g>
+      <g opacity=".9"><circle cx="196" cy="560" r="12" fill="#ff6f61"/><circle cx="212" cy="552" r="9" fill="#ff7b6b"/><circle cx="184" cy="566" r="8" fill="#e8564f"/>
+        <path d="M232,580 v-30 M232,560 l-10,-12 M232,555 l12,-14" stroke="#e0566a" stroke-width="5" stroke-linecap="round"/></g>
+      <g opacity=".9"><circle cx="960" cy="566" r="10" fill="#b84a8a"/><circle cx="974" cy="560" r="7" fill="#c95a9a"/><circle cx="948" cy="572" r="6" fill="#9a3d74"/></g>
+      <!-- hazards + pearls on path -->
+      <use href="#urchin" x="604" y="492" width="50" height="50"/>
+      <use href="#urchin" x="884" y="512" width="42" height="42"/>
+      <g filter="url(#fGlow)"><use href="#pearl" x="560" y="540" width="14" height="14"/><use href="#pearl" x="690" y="520" width="14" height="14"/><use href="#pearl" x="860" y="556" width="14" height="14"/></g>
+      <g class="snow" data-w="1130" data-h="600" data-n="170"></g>
+      <rect width="1130" height="600" fill="url(#gVig)"/>
+    </svg>
+    <div class="pill">Mood Board</div>
+    <div class="titleblock">
+      <div class="kicker">Final Lab Game · Concept</div>
+      <h1>The Drowned<br>Sanctum</h1>
+      <div class="tagline">Find the Heart<i>·</i>Survive the Deep<i>·</i>Escape</div>
+    </div>
+    <div class="heroChips">
+      <div class="chip">3D <b>Top-Down</b> Maze Escape</div>
+      <div class="chip">Single Player · PC (.exe)</div>
+      <div class="chip">Mood: <b>Mysterious → Panic</b></div>
+    </div>
+  </section>
+
+  <!-- ============ RIGHT TOP ============ -->
+  <div class="rightTop">
+    <section class="panel elements">
+      <div class="pill">Game Elements</div>
+      <div class="cards">
+        <div class="card">
+          <h3>Player</h3><div class="sub">Explorer Sub</div>
+          <svg viewBox="0 0 200 120"><polygon points="178,64 178,72 200,90 200,46" fill="url(#gLamp)" opacity=".6"/><use href="#sub" x="0" y="8" width="190" height="104"/><g fill="none" stroke="#e6fffb" stroke-width="1.5" opacity=".7"><circle cx="10" cy="40" r="4"/><circle cx="4" cy="24" r="3"/></g></svg>
+          <div class="note">Headlamp lights the dark maze. Oxygen = life.</div>
+        </div>
+        <div class="card">
+          <h3>Keys &amp; Loot</h3><div class="sub">3 Sigils · Pearls</div>
+          <svg viewBox="0 0 200 120"><use href="#sigilMoon" x="24" y="4" width="48" height="61"/><use href="#sigilSun" x="76" y="4" width="48" height="61"/><use href="#sigilStar" x="128" y="4" width="48" height="61"/>
+            <use href="#pearl" x="58" y="78" width="20" height="20"/><use href="#pearl" x="84" y="84" width="20" height="20"/><use href="#pearl" x="110" y="78" width="20" height="20"/><use href="#pearl" x="136" y="84" width="16" height="16"/></svg>
+          <div class="note">Sigils open matching gates. Pearls add score.</div>
+        </div>
+        <div class="card">
+          <h3>Hazards</h3><div class="sub">Urchins · Guardian</div>
+          <svg viewBox="0 0 200 120"><use href="#urchin" x="4" y="22" width="82" height="82"/><g transform="translate(198,26) scale(-.54,.54)"><use href="#shark" width="200" height="80"/></g>
+            <g stroke="#3DF5E0" stroke-opacity=".6" stroke-width="3" fill="none" stroke-linecap="round"><path d="M100,84 l8,8 l-8,8 M116,84 l8,8 l-8,8 M132,84 l8,8 l-8,8"/></g><text x="150" y="98" font-size="12" fill="#3DF5E0" font-family="Exo2" font-weight="700">current</text></svg>
+          <div class="note">Spikes, currents and a patrolling shark drain air.</div>
+        </div>
+        <div class="card">
+          <h3>Artifact</h3><div class="sub">Heart of Eternity</div>
+          <svg viewBox="0 0 200 120"><circle cx="100" cy="58" r="48" fill="none" stroke="#5E6B5A" stroke-width="7"/><g stroke="#3DF5E0" stroke-width="2" opacity=".75"><path d="M100,6 v8 M100,102 v8 M48,58 h8 M144,58 h8 M63,21 l6,6 M137,21 l-6,6 M63,95 l6,-6 M137,95 l-6,-6"/></g><use href="#heart" x="64" y="22" width="72" height="72"/></svg>
+          <div class="note">Take it, then escape within 90 seconds.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel palette">
+      <div class="pill">Color Palette</div>
+      <div class="swatches">
+        <div class="sw"><div class="dot" style="background:#0B1A2A"></div><div class="nm">Abyss</div><div class="hx">#0B1A2A</div></div>
+        <div class="sw"><div class="dot" style="background:#0F4C5C"></div><div class="nm">Deep Teal</div><div class="hx">#0F4C5C</div></div>
+        <div class="sw"><div class="dot" style="background:#5E6B5A"></div><div class="nm">Mossy Stone</div><div class="hx">#5E6B5A</div></div>
+        <div class="sw"><div class="dot" style="background:#3DF5E0;box-shadow:0 0 14px #3DF5E0"></div><div class="nm">Biolume</div><div class="hx">#3DF5E0</div></div>
+        <div class="sw"><div class="dot" style="background:#F2EFE6"></div><div class="nm">Pearl</div><div class="hx">#F2EFE6</div></div>
+        <div class="sw"><div class="dot" style="background:#FFB43A;box-shadow:0 0 14px #FFB43A"></div><div class="nm">Eternity</div><div class="hx">#FFB43A</div></div>
+        <div class="sw"><div class="dot" style="background:#FF4D4D"></div><div class="nm">Alarm</div><div class="hx">#FF4D4D</div></div>
+      </div>
+    </section>
+
+    <section class="panel assets">
+      <div class="pill">Materials &amp; Free Assets</div>
+      <div class="row">
+        <div class="tile"><img src="src/tex_rock.jpg" alt=""><span>Walls</span></div>
+        <div class="tile"><img src="src/tex_floor.jpg" alt=""><span>Floor</span></div>
+        <div class="tile"><img src="src/tex_sand.jpg" alt=""><span>Seabed</span></div>
+        <div class="list">
+          <div><b>Maze:</b> Kenney Modular Dungeon</div>
+          <div><b>Props:</b> Kenney Mini Dungeon</div>
+          <div><b>Shark/Fish:</b> Quaternius</div>
+          <div><b>Textures:</b> ambientCG</div>
+          <div><b>SFX:</b> Kenney Sci-Fi + UI</div>
+          <div><b>Music:</b> OpenGameArt</div>
+          <div class="free">All free (CC0 / OFL) · Sub, Heart &amp; sigils made in Blender</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ STORYBOARD ============ -->
+  <section class="panel story">
+    <div class="pill">Storyboard</div>
+    <div class="frames">
+
+      <!-- 1 -->
+      <div class="frame"><div class="fhead"><div class="num">1</div><b>Dive In</b></div><div class="fbody">
+        <svg viewBox="0 0 355 192" preserveAspectRatio="xMidYMid slice">
+          <rect width="355" height="192" fill="url(#gWater)"/>
+          <g filter="url(#fBlur3)" opacity=".5"><polygon points="30,0 60,0 120,192 80,192" fill="url(#gShaft)"/></g>
+          <rect x="160" width="195" height="192" fill="url(#gDarkR)"/>
+          <path d="M0,160 Q90,148 180,158 T355,152 V192 H0 Z" fill="url(#gSand)"/>
+          <clipPath id="cpArch1"><path d="M36,160 V66 Q36,40 70,40 Q104,40 104,66 V160 Z"/></clipPath>
+          <path d="M36,160 V66 Q36,40 70,40 Q104,40 104,66 V160 Z" fill="#8fdcdc" opacity=".45"/>
+          <g clip-path="url(#cpArch1)">
+            <g stroke="#4f412f" stroke-width="5"><path d="M44,30 V122 M57,30 V122 M70,30 V122 M83,30 V122 M96,30 V122"/></g>
+            <g stroke="#4f412f" stroke-width="4"><path d="M36,62 H104 M36,96 H104"/></g>
+            <g fill="#4f412f"><polygon points="41.5,122 44,132 46.5,122"/><polygon points="54.5,122 57,132 59.5,122"/><polygon points="67.5,122 70,132 72.5,122"/><polygon points="80.5,122 83,132 85.5,122"/><polygon points="93.5,122 96,132 98.5,122"/></g>
+          </g>
+          <path d="M18,160 V64 Q18,22 70,22 Q122,22 122,64 V160 H104 V66 Q104,40 70,40 Q36,40 36,66 V160 Z" fill="#3e575b" stroke="#6a8a8d" stroke-width="1.5"/>
+          <circle cx="70" cy="31" r="4" fill="#3DF5E0" filter="url(#fGlow)"/>
+          <g stroke="#fff" stroke-width="2" stroke-dasharray="5 4" opacity=".6"><path d="M10,70 V112 M130,70 V112"/></g>
+          <text x="128" y="50" font-family="Cinzel" font-weight="900" font-size="15" fill="#FF4D4D" transform="rotate(-8 128 50)">SLAM!</text>
+          <polygon points="257,101 257,109 355,142 355,64" fill="url(#gLamp)" opacity=".55" filter="url(#fBlur3)"/>
+          <use href="#sub" x="150" y="68" width="120" height="66"/>
+          <g fill="none" stroke="#e6fffb" stroke-width="1.4" opacity=".75"><circle cx="150" cy="96" r="3"/><circle cx="144" cy="84" r="4"/><circle cx="150" cy="72" r="2.5"/></g>
+          <g class="snow" data-w="355" data-h="192" data-n="40"></g>
+        </svg>
+        <div class="cap">An old map leads you in… then the gate slams shut.</div>
+      </div></div>
+
+      <!-- 2 -->
+      <div class="frame"><div class="fhead"><div class="num">2</div><b>Explore the Maze</b></div><div class="fbody">
+        <svg viewBox="0 0 355 192" preserveAspectRatio="xMidYMid slice">
+          <rect width="355" height="192" fill="#22312d"/>
+          <image href="src/tex_sand.jpg" width="355" height="192" preserveAspectRatio="xMidYMid slice" opacity=".4"/>
+          <rect width="355" height="192" fill="#0f2a2e" opacity=".45"/>
+          <g filter="url(#fGlow)"><use href="#pearl" x="214" y="90" width="12" height="12"/><use href="#pearl" x="244" y="104" width="12" height="12"/><use href="#pearl" x="40" y="116" width="11" height="11"/></g>
+          <use href="#vent" x="284" y="22" width="40" height="40"/>
+          <polygon points="140,95 140,105 250,132 250,68" fill="url(#gLamp)" opacity=".6"/>
+          <g transform="translate(118,100) rotate(90) translate(-16,-27)"><use href="#subTop" width="32" height="54"/></g>
+          <g filter="url(#fShadow)">
+            <g stroke="#6b7a67" stroke-width="12" stroke-linecap="square" fill="none">
+              <path d="M12,12 H343 V70 M343,124 V180 H12 V12 M70,12 V58 M12,140 H110 V180 M130,48 H220 M220,12 V48 M170,144 H300 M262,12 V70 M300,144 V180"/>
+            </g>
+            <g stroke="#9aa995" stroke-width="3" stroke-linecap="square" fill="none" opacity=".55" transform="translate(0,-3)">
+              <path d="M12,12 H343 V70 M343,124 V180 H12 V12 M70,12 V58 M12,140 H110 V180 M130,48 H220 M220,12 V48 M170,144 H300 M262,12 V70 M300,144 V180"/>
+            </g>
+          </g>
+          <mask id="mFog2" maskUnits="userSpaceOnUse" x="0" y="0" width="355" height="192"><rect width="355" height="192" fill="#fff"/><circle cx="160" cy="100" r="115" fill="url(#gHole)"/><circle cx="304" cy="42" r="46" fill="url(#gHole)"/></mask>
+          <rect width="355" height="192" fill="#02070b" opacity=".72" mask="url(#mFog2)"/>
+          <text x="304" y="78" text-anchor="middle" font-size="11" fill="#3DF5E0" font-weight="800" font-family="Exo2">+O₂</text>
+          <g transform="translate(20,22)"><rect width="82" height="22" rx="5" fill="#030c14" fill-opacity=".88" stroke="#3DF5E0" stroke-opacity=".55"/><text x="7" y="15" font-size="11" fill="#3DF5E0" font-weight="800" font-family="Exo2">O₂</text><rect x="26" y="8" width="48" height="6" rx="3" fill="#0F4C5C"/><rect x="26" y="8" width="32" height="6" rx="3" fill="#3DF5E0"/></g>
+        </svg>
+        <div class="cap">Dark corridors and dead ends. Refill air at vents.</div>
+      </div></div>
+
+      <!-- 3 -->
+      <div class="frame"><div class="fhead"><div class="num">3</div><b>Find the Sigils</b></div><div class="fbody">
+        <svg viewBox="0 0 355 192" preserveAspectRatio="xMidYMid slice">
+          <rect width="355" height="192" fill="url(#gWater)"/>
+          <rect width="355" height="192" fill="#04121b" opacity=".4"/>
+          <image href="src/tex_floor.jpg" x="0" y="140" width="355" height="60" preserveAspectRatio="xMidYMid slice" opacity=".55"/>
+          <rect y="140" width="355" height="52" fill="#0b2a33" opacity=".5"/>
+          <circle cx="100" cy="66" r="46" fill="url(#gCyanGlow)"/>
+          <g stroke="#3DF5E0" stroke-opacity=".35" stroke-width="2"><path d="M100,14 V24 M60,30 L68,38 M140,30 L132,38 M52,66 H62 M138,66 H148"/></g>
+          <rect x="72" y="104" width="56" height="40" fill="#4a5f5c"/><rect x="64" y="98" width="72" height="10" rx="2" fill="#5f7773"/><rect x="66" y="140" width="68" height="8" fill="#3b4e4b"/>
+          <use href="#sigilMoon" x="82" y="42" width="36" height="46"/>
+          <path d="M234,148 V64 Q234,48 268,48 Q302,48 302,64 V148 Z" fill="#02090f"/>
+          <clipPath id="cpGate3"><path d="M234,148 V64 Q234,48 268,48 Q302,48 302,64 V148 Z"/></clipPath>
+          <g clip-path="url(#cpGate3)"><g stroke="#4f412f" stroke-width="5"><path d="M242,30 V80 M255,30 V80 M268,30 V80 M281,30 V80 M294,30 V80"/></g><path d="M234,66 H302" stroke="#4f412f" stroke-width="4"/></g>
+          <path d="M220,148 V60 Q220,34 268,34 Q316,34 316,60 V148 H302 V64 Q302,48 268,48 Q234,48 234,64 V148 Z" fill="#3e575b" stroke="#6a8a8d" stroke-width="1.5"/>
+          <use href="#glyphMoon" x="250" y="2" width="36" height="46"/>
+          <g stroke="#3DF5E0" stroke-width="3" fill="none" stroke-linecap="round" filter="url(#fGlow)"><path d="M258,112 l10,-10 l10,10 M258,128 l10,-10 l10,10"/></g>
+          <path d="M122,52 Q186,6 246,22" stroke="#3DF5E0" stroke-dasharray="5 5" stroke-width="2" fill="none" opacity=".75"/>
+          <polygon points="246,22 236,16 238,27" fill="#3DF5E0" opacity=".8"/>
+          <use href="#sub" x="-8" y="104" width="76" height="42"/>
+          <g transform="translate(12,10)"><rect width="56" height="22" rx="6" fill="#030c14" fill-opacity=".85" stroke="#3DF5E0" stroke-opacity=".55"/><text x="28" y="15.5" text-anchor="middle" font-size="12" fill="#3DF5E0" font-weight="800" font-family="Exo2">1 / 3</text></g>
+          <g class="snow" data-w="355" data-h="192" data-n="30"></g>
+        </svg>
+        <div class="cap">Grab a sigil to open its matching gate (3 in total).</div>
+      </div></div>
+
+      <!-- 4 -->
+      <div class="frame"><div class="fhead"><div class="num">4</div><b>Survive the Traps</b></div><div class="fbody">
+        <svg viewBox="0 0 355 192" preserveAspectRatio="xMidYMid slice">
+          <rect width="355" height="192" fill="#22312d"/>
+          <image href="src/tex_sand.jpg" width="355" height="192" preserveAspectRatio="xMidYMid slice" opacity=".4"/>
+          <rect width="355" height="192" fill="#0f2a2e" opacity=".5"/>
+          <g filter="url(#fShadow)"><rect width="355" height="24" fill="#56655a"/><rect y="20" width="355" height="4" fill="#7d8c79"/></g>
+          <g class="chev" data-x="22" data-y="60" data-cols="5" data-rows="3" data-dx="28" data-dy="26"></g>
+          <ellipse cx="268" cy="96" rx="72" ry="40" stroke="#FF4D4D" stroke-opacity=".75" stroke-dasharray="6 6" fill="none" stroke-width="2"/>
+          <g transform="translate(330,74) scale(-.55,.55)"><use href="#shark" width="200" height="80"/></g>
+          <use href="#urchin" x="140" y="26" width="38" height="38"/>
+          <use href="#urchin" x="186" y="120" width="34" height="34"/>
+          <use href="#urchin" x="96" y="126" width="28" height="28"/>
+          <use href="#urchin" x="296" y="30" width="30" height="30"/>
+          <g transform="translate(46,100) rotate(90) translate(-15,-25)"><use href="#subTop" width="30" height="50"/></g>
+          <text x="214" y="124" font-family="Exo2" font-weight="800" font-size="14" fill="#FF6B6B">−20</text>
+          <text x="236" y="52" font-family="Exo2" font-weight="800" font-size="11" fill="#FF8A80" letter-spacing=".08em">PATROL</text>
+        </svg>
+        <div class="cap">Dodge urchins, currents and the guardian shark.</div>
+      </div></div>
+
+      <!-- 5 -->
+      <div class="frame"><div class="fhead"><div class="num">5</div><b>Claim the Heart</b></div><div class="fbody">
+        <svg viewBox="0 0 355 192" preserveAspectRatio="xMidYMid slice">
+          <rect width="355" height="192" fill="url(#gRedRoom)"/>
+          <image href="src/tex_rock.jpg" width="355" height="192" preserveAspectRatio="xMidYMid slice" opacity=".16"/>
+          <g stroke="#000" stroke-opacity=".6" stroke-width="2" fill="none"><path d="M22,0 L36,30 L28,52 L42,82 L34,100"/><path d="M332,0 L318,24 L328,48 L312,72"/></g>
+          <circle cx="178" cy="66" r="76" fill="url(#gHeartGlow)"/>
+          <rect x="120" y="130" width="116" height="24" fill="#4b3a3a"/><rect x="136" y="112" width="84" height="20" fill="#5a4646"/><rect x="150" y="96" width="56" height="18" fill="#6a5454"/>
+          <use href="#heart" x="148" y="34" width="60" height="60"/>
+          <g fill="#6a5454"><polygon points="60,30 72,26 76,38 64,42"/><polygon points="292,46 302,44 304,54 294,56"/><polygon points="250,18 258,16 260,24 252,26"/></g>
+          <g stroke="#fff" stroke-opacity=".35" stroke-width="1.5"><path d="M66,8 V22 M70,6 V20 M298,26 V40 M255,2 V12"/></g>
+          <polygon points="98,124 98,132 150,150 150,104" fill="url(#gLamp)" opacity=".45"/>
+          <use href="#sub" x="6" y="98" width="96" height="53"/>
+          <rect width="355" height="192" fill="url(#gRedVig)"/>
+          <g transform="translate(236,8)"><rect width="110" height="30" rx="7" fill="#14040a" fill-opacity=".88" stroke="#FF4D4D" stroke-width="1.5"/><text x="55" y="20.5" text-anchor="middle" font-size="15" font-weight="800" fill="#FF8A5C" font-family="Exo2" letter-spacing=".06em">ESCAPE 01:30</text></g>
+        </svg>
+        <div class="cap">Taking the Heart starts a 90-second collapse!</div>
+      </div></div>
+
+      <!-- 6 -->
+      <div class="frame"><div class="fhead"><div class="num">6</div><b>Win or Lose</b></div><div class="fbody">
+        <svg viewBox="0 0 355 192" preserveAspectRatio="xMidYMid slice">
+          <clipPath id="cpWin"><polygon points="0,0 205,0 150,192 0,192"/></clipPath>
+          <clipPath id="cpLose"><polygon points="205,0 355,0 355,192 150,192"/></clipPath>
+          <g clip-path="url(#cpWin)">
+            <rect width="355" height="192" fill="url(#gExit)"/>
+            <g opacity=".5"><polygon points="20,0 50,0 110,192 70,192" fill="#fff" opacity=".35"/></g>
+            <g transform="translate(150,64) scale(-.62,.62)"><use href="#sub" width="200" height="110"/></g>
+            <g fill="none" stroke="#fff" stroke-width="1.5" opacity=".8"><circle cx="160" cy="92" r="4"/><circle cx="172" cy="80" r="3"/><circle cx="180" cy="98" r="5"/><circle cx="190" cy="86" r="2.5"/></g>
+            <text x="14" y="30" font-family="Cinzel" font-weight="900" font-size="20" fill="#06222c">ESCAPED!</text>
+            <text x="14" y="48" font-family="Exo2" font-weight="700" font-size="12" fill="#06222c">Score 1,240 · 0:42 left</text>
+          </g>
+          <g clip-path="url(#cpLose)">
+            <rect width="355" height="192" fill="url(#gLose)"/>
+            <g stroke="#000" stroke-opacity=".55" stroke-width="2" fill="none"><path d="M330,0 L318,30 L328,58 L314,86"/></g>
+            <g transform="translate(236,78) rotate(28)" opacity=".75"><use href="#sub" width="96" height="53"/></g>
+            <text x="344" y="30" text-anchor="end" font-family="Cinzel" font-weight="900" font-size="18" fill="#FF4D4D">GAME OVER</text>
+            <text x="344" y="48" text-anchor="end" font-family="Exo2" font-weight="700" font-size="12" fill="#ff9a8a">O₂ 0% · Try Again</text>
+          </g>
+          <line x1="205" y1="0" x2="150" y2="192" stroke="#F2EFE6" stroke-width="3"/>
+        </svg>
+        <div class="cap">Reach the exit to win. No air or no time: you lose.</div>
+      </div></div>
+
+    </div>
+  </section>
+
+  <!-- ============ RIGHT BOTTOM ============ -->
+  <div class="rightBottom">
+    <section class="panel desc">
+      <div class="pill">Game Description</div>
+      <p>A 3D top-down maze escape. Pilot a tiny explorer sub through a sunken temple, collect <b>3 sigil stones</b>, claim the <b>Heart of Eternity</b> and escape before the Sanctum seals forever.</p>
+    </section>
+    <div class="row2">
+      <section class="panel features">
+        <div class="pill">Gameplay Features</div>
+        <ul class="checks">
+          <li><span><b>Move:</b> WASD / Arrow Keys</span></li>
+          <li><span><b>Boost:</b> Shift (burns more oxygen)</span></li>
+          <li><span>Oxygen drains, so refill at air vents</span></li>
+          <li><span>Collect <b>3 sigils</b> to open matching gates</span></li>
+          <li><span>Collect <b>pearls</b> to raise your score</span></li>
+          <li><span>Take the Heart: <b>90 s</b> escape timer</span></li>
+          <li><span><b>Win:</b> reach the exit with the Heart</span></li>
+          <li class="lose"><span><b>Lose:</b> oxygen hits 0 or time runs out</span></li>
+        </ul>
+      </section>
+      <section class="panel hud">
+        <div class="pill">UI Elements</div>
+        <div class="hudbox">
+          <div class="top"><span>EXPLORER · QAIM</span><span>SCORE <b>860</b></span></div>
+          <div class="hrow"><span class="lbl">O₂</span><div class="bar"><i></i></div><span>72%</span></div>
+          <div class="hrow"><span class="lbl">SIGILS</span>
+            <svg width="18" height="23"><use href="#sigilMoon" width="18" height="23"/></svg><svg width="18" height="23"><use href="#sigilSun" width="18" height="23"/></svg><svg width="18" height="23"><use href="#sigilDim" width="18" height="23"/></svg><span style="margin-left:4px">2 / 3</span></div>
+          <div class="hrow"><span class="lbl">PEARLS</span><svg width="16" height="16"><use href="#pearl" width="16" height="16"/></svg><span>× 14</span></div>
+          <div class="timer">ESCAPE 01:30</div>
+        </div>
+        <div class="menu"><b>Menus:</b> Play · Profile · Leaderboard · How to Play · Quit</div>
+      </section>
+    </div>
+    <div class="row3">
+      <section class="panel small scoring">
+        <div class="pill">Score &amp; Profile</div>
+        <div class="pts"><span>Pearl +10</span><span>Sigil +50</span><span>Heart +200</span><span>Time left ×5</span><span class="neg">Hit −20</span></div>
+        <p><b>Saved:</b> name, best score, best time, top-5 board.</p>
+      </section>
+      <section class="panel small theme">
+        <div class="pill">Overall Theme</div>
+        <div class="moods"><span>Mysterious</span><span>Claustrophobic</span><span>Calm → Panic</span></div>
+        <p>Quiet blue depths that turn <b style="color:#FFB43A">amber</b> and <b style="color:#FF4D4D">red</b> once the Heart is taken.</p>
+      </section>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="who">Student: <b>Syed Qaim Raza</b><span>|</span>Roll No: <b>CT-24190</b><span>|</span>Department: CSIT<span>|</span>Course: Game Development (FGD Lab)</div>
+    <div class="tools">Built with <b>Unity 6.3 (URP)</b> · <b>Blender 5.2</b> · Free CC0 assets</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const NS='http://www.w3.org/2000/svg';
+  function rng(s){return function(){s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+  document.querySelectorAll('g.snow').forEach(function(g,i){
+    const r=rng(101+i),w=+g.dataset.w,h=+g.dataset.h,n=+g.dataset.n;
+    for(let k=0;k<n;k++){const c=document.createElementNS(NS,'circle');
+      c.setAttribute('cx',(r()*w).toFixed(1));c.setAttribute('cy',(r()*h).toFixed(1));
+      c.setAttribute('r',(0.5+r()*1.5).toFixed(2));c.setAttribute('fill','#d8f6f2');c.setAttribute('opacity',(0.1+r()*0.45).toFixed(2));g.appendChild(c);}
+  });
+  const us=document.getElementById('uSpikes'),r=rng(7);
+  for(let k=0;k<22;k++){const a=k/22*Math.PI*2+r()*0.12,L=38+r()*9;
+    const l=document.createElementNS(NS,'line');
+    l.setAttribute('x1',(50+18*Math.cos(a)).toFixed(1));l.setAttribute('y1',(50+18*Math.sin(a)).toFixed(1));
+    l.setAttribute('x2',(50+L*Math.cos(a)).toFixed(1));l.setAttribute('y2',(50+L*Math.sin(a)).toFixed(1));us.appendChild(l);
+    const t=document.createElementNS(NS,'circle');t.setAttribute('cx',(50+L*Math.cos(a)).toFixed(1));t.setAttribute('cy',(50+L*Math.sin(a)).toFixed(1));
+    t.setAttribute('r','1.9');t.setAttribute('fill','#FF6B6B');t.setAttribute('stroke','none');us.appendChild(t);}
+  document.querySelectorAll('g.chev').forEach(function(g){
+    const x0=+g.dataset.x,y0=+g.dataset.y,c=+g.dataset.cols,rw=+g.dataset.rows,dx=+g.dataset.dx,dy=+g.dataset.dy;let d='';
+    for(let i=0;i<rw;i++)for(let j=0;j<c;j++){const x=x0+j*dx+(i%2)*10,y=y0+i*dy;d+='M'+x+','+(y-7)+' l8,7 l-8,7 ';}
+    const p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('stroke','#3DF5E0');p.setAttribute('stroke-opacity','.45');
+    p.setAttribute('stroke-width','3');p.setAttribute('fill','none');p.setAttribute('stroke-linecap','round');p.setAttribute('stroke-linejoin','round');g.appendChild(p);
+  });
+})();
+</script>
+</body>
+</html>

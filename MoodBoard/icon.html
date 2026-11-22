@@ -1,0 +1,114 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;width:512px;height:512px;background:transparent;overflow:hidden}</style></head><body><svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a8ea6"/><stop offset=".3" stop-color="#136179"/><stop offset=".62" stop-color="#0b3346"/><stop offset="1" stop-color="#051019"/></linearGradient>
+  <radialGradient id="gSurface" cx=".5" cy="0" r=".7"><stop offset="0" stop-color="#b4fff4" stop-opacity=".35"/><stop offset="1" stop-color="#b4fff4" stop-opacity="0"/></radialGradient>
+  <linearGradient id="gShaft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d8fffa" stop-opacity=".6"/><stop offset="1" stop-color="#d8fffa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="gLamp" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff6cf" stop-opacity=".8"/><stop offset="1" stop-color="#fff6cf" stop-opacity="0"/></linearGradient>
+  <linearGradient id="gSand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d5048"/><stop offset="1" stop-color="#16231f"/></linearGradient>
+  <linearGradient id="gStoneCol" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1d3034"/><stop offset=".35" stop-color="#4f6c6e"/><stop offset=".7" stop-color="#3a5357"/><stop offset="1" stop-color="#1a2b2f"/></linearGradient>
+  <linearGradient id="gStoneColH" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#557476"/><stop offset="1" stop-color="#1f3236"/></linearGradient>
+  <linearGradient id="gStone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7f8d79"/><stop offset="1" stop-color="#3f4b3e"/></linearGradient>
+  <linearGradient id="gBrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD983"/><stop offset=".45" stop-color="#E9A23B"/><stop offset="1" stop-color="#7f4c14"/></linearGradient>
+  <linearGradient id="gBrass2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5C060"/><stop offset="1" stop-color="#A8691F"/></linearGradient>
+  <linearGradient id="gBrassH" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7f4c14"/><stop offset=".5" stop-color="#F2B24E"/><stop offset="1" stop-color="#7f4c14"/></linearGradient>
+  <radialGradient id="gPort" cx=".42" cy=".4" r=".6"><stop offset="0" stop-color="#E4FFFB"/><stop offset=".45" stop-color="#3DF5E0"/><stop offset="1" stop-color="#0F4C5C"/></radialGradient>
+  <linearGradient id="gHeart" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE9A6"/><stop offset=".45" stop-color="#FFB43A"/><stop offset="1" stop-color="#B8560E"/></linearGradient>
+  <radialGradient id="gHeartGlow"><stop offset="0" stop-color="#FFB43A" stop-opacity=".8"/><stop offset=".45" stop-color="#FFB43A" stop-opacity=".28"/><stop offset="1" stop-color="#FFB43A" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gCyanGlow"><stop offset="0" stop-color="#3DF5E0" stop-opacity=".7"/><stop offset=".5" stop-color="#3DF5E0" stop-opacity=".2"/><stop offset="1" stop-color="#3DF5E0" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gPearl" cx=".38" cy=".34" r=".7"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#efe9da"/><stop offset="1" stop-color="#a9a18c"/></radialGradient>
+  <radialGradient id="gUrchin" cx=".4" cy=".38" r=".65"><stop offset="0" stop-color="#9a4479"/><stop offset=".7" stop-color="#4a1c3d"/><stop offset="1" stop-color="#2a0f22"/></radialGradient>
+  <radialGradient id="gVig" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#020a10" stop-opacity="0"/><stop offset="1" stop-color="#020a10" stop-opacity=".82"/></radialGradient>
+  <radialGradient id="gHole"><stop offset="0" stop-color="#000"/><stop offset=".5" stop-color="#000"/><stop offset="1" stop-color="#fff"/></radialGradient>
+  <linearGradient id="gDarkR" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#02080d" stop-opacity="0"/><stop offset="1" stop-color="#02080d" stop-opacity=".78"/></linearGradient>
+  <linearGradient id="gRedRoom" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#40191e"/><stop offset="1" stop-color="#110608"/></linearGradient>
+  <radialGradient id="gRedVig" cx=".5" cy=".45" r=".75"><stop offset=".45" stop-color="#FF4D4D" stop-opacity="0"/><stop offset="1" stop-color="#FF4D4D" stop-opacity=".5"/></radialGradient>
+  <linearGradient id="gExit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4fff8"/><stop offset=".55" stop-color="#6cc9d1"/><stop offset="1" stop-color="#1b7590"/></linearGradient>
+  <linearGradient id="gLose" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a1218"/><stop offset="1" stop-color="#0c0306"/></linearGradient>
+
+  <filter id="fGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="fBlur8" x="-30%" y="-10%" width="160%" height="120%"><feGaussianBlur stdDeviation="8"/></filter>
+  <filter id="fBlur3" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>
+  <filter id="fShadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000" flood-opacity=".55"/></filter>
+
+  <mask id="mMoon" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="76"><rect width="60" height="76" fill="#fff"/><circle cx="37" cy="32" r="13" fill="#000"/></mask>
+
+  <!-- explorer sub, side view, facing right. lamp at (178,62) -->
+  <symbol id="sub" viewBox="0 0 200 110">
+    <rect x="14" y="55" width="26" height="6" fill="#6b4512"/>
+    <g transform="translate(15,58)"><ellipse cx="0" cy="-12" rx="5" ry="13" fill="#d8993a"/><ellipse cx="0" cy="12" rx="5" ry="13" fill="#a46d22"/><circle r="5" fill="#6b4512"/></g>
+    <polygon points="46,56 24,30 39,30 60,52" fill="#c4842e"/>
+    <polygon points="46,62 24,88 39,88 60,66" fill="#9a6220"/>
+    <ellipse cx="106" cy="60" rx="70" ry="33" fill="url(#gBrass)"/>
+    <path d="M40,64 Q106,104 172,64 Q160,92 106,93 Q52,92 40,64 Z" fill="#000" opacity=".18"/>
+    <path d="M80,34 L84,14 Q86,8 93,8 L119,8 Q126,8 127,14 L131,34 Z" fill="url(#gBrass2)"/>
+    <path d="M112,8 V2 H124" stroke="#6b4512" stroke-width="3" fill="none"/>
+    <path d="M44,67 Q106,85 172,67" stroke="#0F4C5C" stroke-width="6" fill="none"/>
+    <circle cx="132" cy="54" r="14" fill="#5b3a0f"/><circle cx="132" cy="54" r="10" fill="url(#gPort)"/><ellipse cx="128" cy="50" rx="3.5" ry="2.2" fill="#fff" opacity=".85"/>
+    <circle cx="99" cy="54" r="9" fill="#5b3a0f"/><circle cx="99" cy="54" r="6" fill="url(#gPort)"/>
+    <circle cx="72" cy="56" r="6" fill="#5b3a0f"/><circle cx="72" cy="56" r="3.8" fill="url(#gPort)"/>
+    <g fill="#ffe7b0" opacity=".75"><circle cx="58" cy="44" r="1.6"/><circle cx="80" cy="38" r="1.6"/><circle cx="150" cy="38" r="1.6"/><circle cx="164" cy="48" r="1.6"/><circle cx="60" cy="76" r="1.6"/><circle cx="150" cy="80" r="1.6"/></g>
+    <rect x="166" y="55" width="11" height="14" rx="3" fill="#6b4512"/>
+    <circle cx="178" cy="62" r="11" fill="#fff3c4" opacity=".28"/><circle cx="178" cy="62" r="6" fill="#fff6d6"/>
+    <polygon points="104,86 90,102 124,96 118,86" fill="#9a6220"/>
+    <path d="M62,40 Q100,24 150,38" stroke="#fff6d8" stroke-width="4" fill="none" opacity=".4" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- explorer sub, top-down, nose up. lamp at (30,9) -->
+  <symbol id="subTop" viewBox="0 0 60 100">
+    <polygon points="15,76 2,94 22,88" fill="#9a6220"/><polygon points="45,76 58,94 38,88" fill="#9a6220"/>
+    <rect x="26" y="86" width="8" height="10" fill="#6b4512"/><ellipse cx="30" cy="96" rx="13" ry="3" fill="#d8993a"/>
+    <rect x="13" y="8" width="34" height="82" rx="17" fill="url(#gBrassH)"/>
+    <ellipse cx="30" cy="48" rx="10" ry="16" fill="#b8792a"/>
+    <circle cx="30" cy="25" r="6" fill="url(#gPort)"/>
+    <circle cx="30" cy="9" r="4.5" fill="#fff6d6"/>
+  </symbol>
+
+  <symbol id="heart" viewBox="0 0 120 120">
+    <circle cx="60" cy="62" r="58" fill="url(#gHeartGlow)"/>
+    <path d="M60,100 L20,58 Q6,40 20,26 Q38,10 60,32 Q82,10 100,26 Q114,40 100,58 Z" fill="url(#gHeart)" stroke="#ffe7a8" stroke-width="2"/>
+    <g stroke="#fff4cf" stroke-opacity=".55" stroke-width="1.5" fill="none"><path d="M60,32 L60,100 M22,30 L60,56 L98,30 M13,44 L60,56 L107,44 M36,80 L60,56 L84,80"/></g>
+    <path d="M28,32 Q36,21 48,27" stroke="#fff" fill="none" stroke-width="3" opacity=".85" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="tablet" viewBox="0 0 60 76">
+    <rect x="2" y="2" width="56" height="72" rx="12" fill="url(#gStone)" stroke="#97a592" stroke-width="2"/>
+    <rect x="8" y="8" width="44" height="60" rx="8" fill="none" stroke="#2c372b" stroke-width="2" opacity=".6"/>
+  </symbol>
+  <symbol id="glyphMoon" viewBox="0 0 60 76"><g filter="url(#fGlow)"><circle cx="30" cy="38" r="15" fill="#3DF5E0" mask="url(#mMoon)"/></g></symbol>
+  <symbol id="glyphSun" viewBox="0 0 60 76"><g filter="url(#fGlow)" stroke="#3DF5E0" stroke-width="3" stroke-linecap="round"><circle cx="30" cy="38" r="7.5" fill="#3DF5E0" stroke="none"/><path d="M42,38 H47 M38.5,46.5 L42,50 M30,50 V55 M21.5,46.5 L18,50 M18,38 H13 M21.5,29.5 L18,26 M30,26 V21 M38.5,29.5 L42,26"/></g></symbol>
+  <symbol id="glyphStar" viewBox="0 0 60 76"><g filter="url(#fGlow)"><polygon points="30,22 33.8,32.7 45.2,33.1 36.2,40 39.4,50.9 30,44.5 20.6,50.9 23.8,40 14.8,33.1 26.2,32.7" fill="#3DF5E0"/></g></symbol>
+  <symbol id="sigilMoon" viewBox="0 0 60 76"><use href="#tablet" width="60" height="76"/><use href="#glyphMoon" width="60" height="76"/></symbol>
+  <symbol id="sigilSun" viewBox="0 0 60 76"><use href="#tablet" width="60" height="76"/><use href="#glyphSun" width="60" height="76"/></symbol>
+  <symbol id="sigilStar" viewBox="0 0 60 76"><use href="#tablet" width="60" height="76"/><use href="#glyphStar" width="60" height="76"/></symbol>
+  <symbol id="sigilDim" viewBox="0 0 60 76"><use href="#tablet" width="60" height="76"/><circle cx="30" cy="38" r="9" fill="none" stroke="#2c372b" stroke-width="3"/></symbol>
+
+  <symbol id="pearl" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.5" fill="url(#gPearl)"/><circle cx="7" cy="7" r="2.4" fill="#fff" opacity=".9"/></symbol>
+
+  <symbol id="urchin" viewBox="0 0 100 100">
+    <g id="uSpikes" stroke="#3a1430" stroke-width="3.2" stroke-linecap="round"></g>
+    <circle cx="50" cy="50" r="22" fill="url(#gUrchin)"/>
+    <ellipse cx="43" cy="42" rx="7" ry="4" fill="#fff" opacity=".18"/>
+  </symbol>
+
+  <!-- guardian shark, facing right -->
+  <symbol id="shark" viewBox="0 0 200 80">
+    <g fill="#0a2430" stroke="#2a5a6a" stroke-width="1.5" stroke-linejoin="round">
+      <path d="M2,16 L28,38 L2,66 L14,40 Z"/>
+      <path d="M22,40 Q42,30 72,29 L86,6 L100,28 Q150,26 178,36 Q196,42 198,46 Q188,52 172,53 Q140,58 102,55 L86,72 L78,55 Q46,54 22,44 Z"/>
+    </g>
+    <circle cx="176" cy="41" r="7" fill="#FF4D4D" opacity=".3"/><circle cx="176" cy="41" r="2.6" fill="#FF4D4D"/>
+  </symbol>
+
+  <symbol id="fish" viewBox="0 0 36 20"><path d="M0,10 Q12,0 26,6 L35,0 L33,10 L35,20 L26,14 Q12,20 0,10 Z" fill="currentColor"/></symbol>
+
+  <symbol id="vent" viewBox="0 0 60 60">
+    <circle cx="30" cy="30" r="27" fill="url(#gCyanGlow)"/>
+    <circle cx="30" cy="30" r="17" fill="#3b4a3d" stroke="#7d8c79" stroke-width="3"/>
+    <circle cx="30" cy="30" r="10" fill="url(#gPort)"/>
+    <g fill="none" stroke="#e8fffb" stroke-width="1.5" opacity=".8"><circle cx="46" cy="14" r="3"/><circle cx="52" cy="24" r="2"/><circle cx="12" cy="12" r="2.5"/></g>
+  </symbol>
+</defs>
+</svg>
+<svg width="512" height="512" viewBox="0 0 512 512"><defs><radialGradient id="ib" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#16708a"/><stop offset="1" stop-color="#06141f"/></radialGradient></defs>
+<rect x="16" y="16" width="480" height="480" rx="96" fill="url(#ib)" stroke="#3DF5E0" stroke-width="10"/>
+<use href="#heart" x="76" y="70" width="360" height="360"/></svg></body></html>

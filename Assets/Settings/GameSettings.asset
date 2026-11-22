@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6101b7cf997293748a58cc5e0f80699e, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: Assembly-CSharp::DrownedSanctum.GameSettings
+  moveSpeed: 5.5
+  boostMultiplier: 1.7
+  acceleration: 6
+  maxOxygen: 100
+  oxygenDrainPerSecond: 0.85
+  boostDrainMultiplier: 2.5
+  escapeDrainMultiplier: 1.5
+  ventRefillPerSecond: 30
+  hazardOxygenDamage: 12
+  hitInvulnerability: 1.2
+  knockbackForce: 7
+  currentForce: 16
+  sharkPatrolSpeed: 3
+  sharkChaseSpeed: 5
+  sharkDetectRange: 10
+  sonarCooldown: 4
+  sonarOxygenCost: 3
+  sonarDuration: 3.5
+  escapeTime: 90
+  pearlScore: 10
+  sigilScore: 50
+  heartScore: 200
+  timeBonusPerSecond: 5
+  hitPenalty: 20
+  difficultyMultipliers:
+  - 0.6
+  - 1
+  - 1.45

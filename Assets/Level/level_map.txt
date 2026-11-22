@@ -1,0 +1,33 @@
+###########################
+#2..#o....#k...k#..o#....3#
+##..#.##.##..H..c.#.#.###.#
+#o.#..#..o#o...o#.#...#...#
+#.##.##.###w...w#.####.#.##
+#....>>>..###X###S.......w#
+##.###.##.##...#####.##.###
+##.#V..#..##o^o##o.#.#..V.#
+##...#U#.###U.U##.##.#.####
+####.#...###.^.##....#...o#
+#o...#.#..##o.o###.#####.##
+##.###.#U.##.U.###.......U#
+##....w#..##^.^###.#U#.#.##
+####.#...###.o.##o.#...#..#
+####.########X##########.##
+#o.#.k#w..o.K.K.o..w#o#..k#
+##.#..#.1.........V.#.#.#.#
+#.....a...U.........b.....#
+#.###.#o.k...P...k.o#.##.##
+#o...w#r....w.w....r#o..V.#
+#############E#############
+; ---------------------------------------------------------------
+; THE DROWNED SANCTUM - level map (north is the top line)
+; Edit the grid above, then run  Drowned Sanctum > 1. Build Everything
+; Every row must have the same length. Lines starting with ';' are ignored.
+;   #  wall               .  floor             P  player start
+;   E  exit gate (needs the Heart)              H  Heart of Eternity
+;   1 2 3  Moon / Sun / Star sigil              a b c  Moon / Sun / Star gate
+;   o  pearl              V  air vent           U  urchin (hazard)
+;   > < ^ v  water current (push direction)    S  shark (patrols its corridor)
+;   X  cracked wall (crumbles during escape)    K  stone column (blocks)
+;   w  seaweed            k  coral              r  rocks
+; Gate 'c' (Star) slams shut when the escape starts.
