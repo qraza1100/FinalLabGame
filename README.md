@@ -7,6 +7,17 @@ A 3D top-down maze-escape game made in **Unity 6.3 (URP)** with custom props mod
 
 ![Mood board](MoodBoard/DrownedSanctum_MoodBoard_CT-24190.png)
 
+## Documentation (submission items)
+
+| Item | File |
+|---|---|
+| Running demo / presentation of the project (14 slides) | [`Documentation/DrownedSanctum_Presentation.pdf`](Documentation/DrownedSanctum_Presentation.pdf) |
+| Prompts: formal record of the AI-assisted development | [`Documentation/DrownedSanctum_Prompts.pdf`](Documentation/DrownedSanctum_Prompts.pdf) |
+| Mood board and storyboard | [`MoodBoard/DrownedSanctum_MoodBoard_CT-24190.pdf`](MoodBoard/DrownedSanctum_MoodBoard_CT-24190.pdf) |
+| Gameplay screenshots | [`Documentation/screenshots/`](Documentation/screenshots) |
+
+The editable HTML sources of both PDFs are in `Documentation/source/`.
+
 ## Play
 
 Run `Build/DrownedSanctum.exe` (Windows 64-bit). Type an explorer name, press **DIVE IN**.
