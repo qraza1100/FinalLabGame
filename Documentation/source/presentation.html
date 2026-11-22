@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Drowned Sanctum: Project Presentation</title>
+<style>
+@font-face{font-family:Cinzel;src:url(fonts/Cinzel.ttf) format('truetype');font-weight:400 900}
+@font-face{font-family:Exo2;src:url(fonts/Exo2.ttf) format('truetype');font-weight:100 900}
+:root{--abyss:#0B1A2A;--teal:#0F4C5C;--stone:#5E6B5A;--cyan:#3DF5E0;--pearl:#F2EFE6;--amber:#FFB43A;--coral:#FF4D4D;--muted:#9fbcc3;--line:rgba(61,245,224,.25)}
+@page{size:1920px 1080px;margin:0}
+html,body{margin:0;background:#050b12}
+body{font-family:Exo2,'Segoe UI',sans-serif;color:var(--pearl);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.slide{width:1920px;height:1080px;position:relative;overflow:hidden;break-after:page;page-break-after:always;box-sizing:border-box;
+  background:radial-gradient(1200px 700px at 15% -10%,#12405a 0%,rgba(8,19,31,0) 70%),radial-gradient(900px 700px at 105% 110%,#0e3142 0%,rgba(8,19,31,0) 70%),linear-gradient(180deg,#081521,#050b12)}
+.slide:last-child{break-after:auto;page-break-after:auto}
+.head{position:absolute;top:54px;left:96px;right:96px;display:flex;align-items:center;gap:26px}
+.num{font-weight:800;font-size:24px;color:#04201a;background:var(--cyan);border-radius:999px;width:54px;height:54px;display:grid;place-items:center;box-shadow:0 0 22px rgba(61,245,224,.45)}
+.title{font-family:Cinzel;font-weight:800;font-size:58px;letter-spacing:.02em}
+.kick{margin-left:auto;font-size:20px;letter-spacing:.3em;color:var(--cyan);font-weight:700;text-transform:uppercase}
+.body{position:absolute;top:170px;left:96px;right:96px;bottom:110px}
+.foot{position:absolute;bottom:38px;left:96px;right:96px;display:flex;justify-content:space-between;font-size:18px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+.foot b{color:var(--cyan);font-weight:700}
+.card{background:linear-gradient(180deg,rgba(19,52,70,.82),rgba(9,25,37,.9));border:1px solid var(--line);border-radius:22px;padding:28px 32px;box-sizing:border-box;box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.card h3{margin:0 0 12px;font-family:Cinzel;font-size:30px;font-weight:700;color:var(--pearl)}
+.card p,.card li{font-size:24px;line-height:1.42;color:#dcebee}
+.card ul{margin:0;padding-left:26px}
+.card li{margin-bottom:8px}
+.card li::marker{color:var(--cyan)}
+b.c{color:var(--cyan)} b.a{color:var(--amber)} b.r{color:var(--coral)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:34px;height:100%}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.shot{border-radius:18px;overflow:hidden;border:1px solid var(--line);position:relative;background:#000;box-shadow:0 14px 34px rgba(0,0,0,.45);min-height:0;min-width:0}
+.shot img{display:block;width:100%;height:100%;object-fit:cover}
+.shot span{position:absolute;left:14px;bottom:14px;background:rgba(3,12,20,.86);border:1px solid var(--line);border-radius:10px;padding:6px 14px;font-size:21px;font-weight:700}
+table{border-collapse:collapse;width:100%}
+td,th{font-size:23px;padding:10px 14px;border-bottom:1px solid rgba(61,245,224,.15);text-align:left}
+th{color:var(--cyan);font-size:19px;letter-spacing:.12em;text-transform:uppercase}
+td.v{text-align:right;color:var(--amber);font-weight:800}
+.ok{color:#33e0a8;font-weight:900}
+.pill{display:inline-block;padding:6px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(4,16,26,.75);font-size:21px;font-weight:700;margin:0 8px 10px 0}
+.key{display:inline-block;min-width:44px;padding:4px 12px;border-radius:8px;background:#0f3a46;border:1px solid rgba(61,245,224,.5);font-weight:800;color:var(--pearl);text-align:center;margin-right:6px}
+/* flow */
+.flow{display:flex;align-items:stretch;gap:0;margin-bottom:34px}
+.step{flex:1;text-align:center;padding:18px 8px;border-radius:16px;background:rgba(15,76,92,.45);border:1px solid var(--line);font-size:21px;font-weight:700;position:relative}
+.step img{width:58px;height:58px;display:block;margin:0 auto 8px}
+.step.g{background:rgba(255,180,58,.14);border-color:rgba(255,180,58,.5)}
+.step.r{background:rgba(255,77,77,.16);border-color:rgba(255,77,77,.55)}
+.arrow{width:34px;display:grid;place-items:center;color:var(--cyan);font-size:30px;font-weight:900}
+/* map */
+#map{display:grid;gap:2px;background:#03090e;padding:8px;border-radius:14px;border:1px solid var(--line)}
+#map div{width:30px;height:30px;border-radius:4px;display:grid;place-items:center;font-size:15px;font-weight:900;position:relative}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:10px 26px;font-size:20px}
+.legend div{display:flex;align-items:center;gap:12px}
+.sw{width:26px;height:26px;border-radius:5px;flex:none;display:grid;place-items:center;font-size:14px;font-weight:900}
+/* architecture */
+.box{border:1px solid var(--line);border-radius:16px;padding:16px 20px;background:rgba(15,76,92,.35)}
+.box h4{margin:0 0 6px;font-size:23px;color:var(--cyan);letter-spacing:.04em}
+.box p{margin:0;font-size:19px;line-height:1.38;color:#d6e8eb}
+.pipe{display:flex;align-items:center;gap:14px;margin-top:20px}
+.pipe .box{flex:1;text-align:center}
+.pipe .arrow{width:30px}
+</style>
+</head>
+<body>
+
+<!-- 1. TITLE -->
+<section class="slide" style="background:#051019">
+  <img src="images/menu_bg.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,9,14,.96) 0%,rgba(2,9,14,.85) 38%,rgba(2,9,14,.1) 75%)"></div>
+  <div style="position:absolute;left:110px;top:150px;width:1100px">
+    <div style="font-size:24px;letter-spacing:.34em;color:var(--cyan);font-weight:800">FINAL LAB PROJECT · RUNNING DEMO &amp; PRESENTATION</div>
+    <div style="font-family:Cinzel;font-weight:900;font-size:132px;line-height:.92;margin:26px 0 28px;text-shadow:0 4px 0 rgba(3,16,24,.9),0 0 34px rgba(61,245,224,.35)">THE DROWNED<br>SANCTUM</div>
+    <div style="font-size:34px;font-weight:600;color:#dcebee;margin-bottom:34px">A 3D top-down maze-escape game beneath the sea</div>
+    <span class="pill">Unity 6.3 · URP</span><span class="pill">Blender 5.2</span><span class="pill">C# · 27 scripts</span><span class="pill">Windows .exe</span>
+    <div style="margin-top:70px;font-size:28px;line-height:1.55">
+      <b>Syed Qaim Raza</b> &nbsp;·&nbsp; Roll No <b>CT-24190</b><br>
+      <span style="color:var(--muted)">Game Development (FGD Lab) &nbsp;·&nbsp; November 2026</span><br>
+      <span style="color:var(--cyan)">github.com/qraza1100/FinalLabGame</span>
+    </div>
+  </div>
+</section>
+
+<!-- 2. BRIEF -> GAME -->
+<section class="slide">
+  <div class="head"><div class="num">01</div><div class="title">From the Brief to Our Game</div><div class="kick">Concept</div></div>
+  <div class="body grid2">
+    <div class="card">
+      <h3>The given storyline</h3>
+      <ul>
+        <li>An explorer follows an old map to a forgotten temple.</li>
+        <li>The entrance <b class="r">seals shut</b> behind them: trapped.</li>
+        <li>A maze of passages, <b class="c">locked doors, hidden keys, ancient symbols</b> and traps.</li>
+        <li>The final chamber holds the <b class="a">Heart of Eternity</b>.</li>
+        <li>Escape before the temple <b class="r">seals itself forever</b>.</li>
+      </ul>
+      <p style="margin-top:22px;color:var(--muted);font-size:21px">Required outline: explorer enters, faces challenges, finds a way through the maze, escapes.</p>
+    </div>
+    <div class="card">
+      <h3>Our interpretation</h3>
+      <table>
+        <tr><th>Story element</th><th>In the game</th></tr>
+        <tr><td>Forgotten temple</td><td>A temple sunk beneath the sea</td></tr>
+        <tr><td>The explorer</td><td>A brass mini-sub with a headlamp</td></tr>
+        <tr><td>Hidden keys &amp; symbols</td><td>Moon, Sun &amp; Star <b class="c">sigil stones</b></td></tr>
+        <tr><td>Locked doors</td><td>Portcullis gates, one per sigil</td></tr>
+        <tr><td>Traps &amp; dangers</td><td>Urchins, currents, a guardian shark</td></tr>
+        <tr><td>Survival pressure</td><td><b class="c">Oxygen</b> drains; air vents refill it</td></tr>
+        <tr><td>Temple seals forever</td><td>90 s collapse + a cracked wall opens a new route</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>2</b> / 14</span></div>
+</section>
+
+<!-- 3. HOW TO PLAY -->
+<section class="slide">
+  <div class="head"><div class="num">02</div><div class="title">How to Play</div><div class="kick">Objective &amp; Controls</div></div>
+  <div class="body">
+    <div class="flow">
+      <div class="step"><img src="images/glyph_moon.png">Moon Sigil</div><div class="arrow">›</div>
+      <div class="step">Moon Gate<br><span style="color:var(--muted);font-size:17px">west wing</span></div><div class="arrow">›</div>
+      <div class="step"><img src="images/glyph_sun.png">Sun Sigil</div><div class="arrow">›</div>
+      <div class="step">Sun Gate<br><span style="color:var(--muted);font-size:17px">east halls</span></div><div class="arrow">›</div>
+      <div class="step"><img src="images/glyph_star.png">Star Sigil</div><div class="arrow">›</div>
+      <div class="step">Star Gate<br><span style="color:var(--muted);font-size:17px">heart chamber</span></div><div class="arrow">›</div>
+      <div class="step g"><img src="images/glyph_heart.png">Heart of Eternity</div><div class="arrow">›</div>
+      <div class="step r">ESCAPE<br>90 seconds</div>
+    </div>
+    <div class="grid2" style="height:auto">
+      <div class="card">
+        <h3>Controls</h3>
+        <table>
+          <tr><td><span class="key">W A S D</span> / arrows</td><td>Swim</td></tr>
+          <tr><td><span class="key">Shift</span></td><td>Boost (uses more oxygen)</td></tr>
+          <tr><td><span class="key">Space</span></td><td>Sonar: an arrow points to the next goal</td></tr>
+          <tr><td><span class="key">Esc</span></td><td>Pause · how to play · restart · menu</td></tr>
+          <tr><td><span class="key">Enter</span></td><td>Start a dive</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Win &amp; lose conditions</h3>
+        <ul>
+          <li><b class="c">WIN</b>: reach the entrance gate carrying the Heart of Eternity before the escape timer ends.</li>
+          <li><b class="r">LOSE</b>: oxygen reaches 0%.</li>
+          <li><b class="r">LOSE</b>: the 90-second escape timer runs out.</li>
+        </ul>
+        <p style="font-size:21px;color:var(--muted);margin-top:16px">Intro text is two lines; the rest is taught by the HUD objective bar, toasts and the sonar.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>3</b> / 14</span></div>
+</section>
+
+<!-- 4. MECHANICS -->
+<section class="slide">
+  <div class="head"><div class="num">03</div><div class="title">Core Mechanics</div><div class="kick">Gameplay systems</div></div>
+  <div class="body" style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:28px">
+    <div class="card"><h3>Oxygen &amp; air vents</h3><p>Oxygen drains every second, faster while boosting and during the escape. Hovering over a glowing vent refills 30 / s. At 25% the HUD pulses red and a warning ticks.</p></div>
+    <div class="card"><h3>Sigils &amp; gates</h3><p>Each sigil stone opens its matching portcullis. Approaching a sealed gate without it shows which sigil is needed. Gates slide down with sound and light.</p></div>
+    <div class="card"><h3>Hazards</h3><p><b class="r">Urchins</b> cost oxygen and points with knock-back. <b class="c">Currents</b> push the sub. The <b class="r">guardian shark</b> patrols its corridor and charges when you enter its lane.</p></div>
+    <div class="card"><h3>Sonar ping</h3><p>Space sends a ring and an arrow toward the current objective for 3.5 s, costing 3% oxygen with a 4 s cooldown. It keeps the maze fair without a minimap.</p></div>
+    <div class="card"><h3>Escape sequence</h3><p>Taking the Heart starts a 90 s timer. The Star Gate slams shut, a cracked wall crumbles into debris to reveal a shortcut, red alarm lighting pulses and the camera rumbles.</p></div>
+    <div class="card"><h3>Difficulty</h3><p>Easy / Normal / Hard (0.6x / 1x / 1.45x) scales oxygen drain and hazard damage. All numbers live in one <b class="c">GameSettings</b> asset for live tuning.</p></div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>4</b> / 14</span></div>
+</section>
+
+<!-- 5. SCORE & PROFILE -->
+<section class="slide">
+  <div class="head"><div class="num">04</div><div class="title">Scoring, Profiles &amp; Progress</div><div class="kick">Player information system</div></div>
+  <div class="body" style="display:grid;grid-template-columns:560px 1fr;gap:34px">
+    <div class="card">
+      <h3>Scoring</h3>
+      <table>
+        <tr><td>Pearl (23 in the level)</td><td class="v">+10</td></tr>
+        <tr><td>Sigil stone</td><td class="v">+50</td></tr>
+        <tr><td>Heart of Eternity</td><td class="v">+200</td></tr>
+        <tr><td>Each second left on escape</td><td class="v">+5</td></tr>
+        <tr><td>Each hit taken</td><td class="v" style="color:var(--coral)">−20</td></tr>
+      </table>
+      <h3 style="margin-top:28px">Saved per explorer</h3>
+      <ul>
+        <li>Name (profile), best score, fastest escape</li>
+        <li>Dives &amp; escapes, pearls collected, last dive</li>
+        <li>Top-10 leaderboard of every run</li>
+        <li>Options: volume, difficulty, fullscreen</li>
+      </ul>
+      <p style="font-size:20px;color:var(--muted)">JSON in PlayerPrefs (<i>SaveSystem.cs</i>), with a two-click reset.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:440px 1fr;gap:22px;height:800px;min-height:0">
+      <div class="shot" style="grid-column:1/3"><img src="../screenshots/12_win_screen.jpg"><span>End screen: score breakdown, personal best, rank</span></div>
+      <div class="shot"><img src="../screenshots/14_leaderboard.jpg"><span>Leaderboard</span></div>
+      <div class="shot"><img src="../screenshots/15_profile.jpg"><span>Explorer profile</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>5</b> / 14</span></div>
+</section>
+
+<!-- 6. LEVEL DESIGN -->
+<section class="slide">
+  <div class="head"><div class="num">05</div><div class="title">Level Design</div><div class="kick">27 × 21 cell maze · 3 m cells</div></div>
+  <div class="body" style="display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start">
+    <div id="map"></div>
+    <div>
+      <div class="card" style="margin-bottom:24px">
+        <h3>Zones</h3>
+        <ul style="font-size:22px">
+          <li><b class="c">Entrance Hall</b>: start, Moon sigil, first vent, tutorial urchin.</li>
+          <li><b class="c">Flooded West Wing</b>: sand floors, currents, urchins, Sun sigil.</li>
+          <li><b class="c">Guardian Halls</b> (east): shark corridor, Star sigil.</li>
+          <li><b class="a">Heart Chamber</b>: altar, Heart of Eternity, manta ray.</li>
+          <li><b class="r">Hidden Shaft</b>: sealed by cracked walls until the escape; currents push against you.</li>
+        </ul>
+      </div>
+      <div class="legend" id="legend"></div>
+      <p style="font-size:19px;color:var(--muted);margin-top:18px">The whole level is read from <i>Assets/Level/level_map.txt</i>: edit the text, rebuild, and the 3D maze regenerates.</p>
+    </div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>6</b> / 14</span></div>
+</section>
+
+<!-- 7. SCREENS 1 -->
+<section class="slide">
+  <div class="head"><div class="num">06</div><div class="title">The Game in Action (1/3)</div><div class="kick">Running demo</div></div>
+  <div class="body" style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:26px">
+    <div class="shot"><img src="../screenshots/01_main_menu.jpg"><span>Main menu: explorer name = profile</span></div>
+    <div class="shot"><img src="../screenshots/04_intro_card.jpg"><span>Two-line intro + controls</span></div>
+    <div class="shot"><img src="../screenshots/05_gameplay_start.jpg"><span>HUD: score, pearls, sigils, oxygen, objective</span></div>
+    <div class="shot"><img src="../screenshots/06_sonar_ping.jpg"><span>Sonar ping points to the Moon Sigil</span></div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>7</b> / 14</span></div>
+</section>
+
+<!-- 8. SCREENS 2 -->
+<section class="slide">
+  <div class="head"><div class="num">07</div><div class="title">The Game in Action (2/3)</div><div class="kick">Running demo</div></div>
+  <div class="body" style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:26px">
+    <div class="shot"><img src="../screenshots/07_west_wing_currents.jpg"><span>West wing: currents push the sub</span></div>
+    <div class="shot"><img src="../screenshots/08_guardian_shark.jpg"><span>Guardian shark charges: −16 O2</span></div>
+    <div class="shot"><img src="../screenshots/09_heart_chamber.jpg"><span>Heart chamber: the Heart of Eternity</span></div>
+    <div class="shot"><img src="../screenshots/10_escape_alarm.jpg"><span>Escape: 90 s timer and red alarm</span></div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>8</b> / 14</span></div>
+</section>
+
+<!-- 9. SCREENS 3 -->
+<section class="slide">
+  <div class="head"><div class="num">08</div><div class="title">The Game in Action (3/3)</div><div class="kick">Running demo</div></div>
+  <div class="body" style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:26px">
+    <div class="shot"><img src="../screenshots/11_hidden_shaft.jpg"><span>The collapsed wall opens the hidden shaft</span></div>
+    <div class="shot"><img src="../screenshots/12_win_screen.jpg"><span>Escaped: win screen</span></div>
+    <div class="shot"><img src="../screenshots/13_lose_screen.jpg"><span>Game over: oxygen ran out</span></div>
+    <div class="shot"><img src="../screenshots/03_options.jpg"><span>Options: volume, difficulty, fullscreen, reset</span></div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>9</b> / 14</span></div>
+</section>
+
+<!-- 10. ART & ASSETS -->
+<section class="slide">
+  <div class="head"><div class="num">09</div><div class="title">Art Direction &amp; Assets</div><div class="kick">Mood board → game</div></div>
+  <div class="body" style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr;gap:28px">
+    <div class="shot" style="height:470px"><img src="images/moodboard.jpg" style="object-fit:contain;background:#081521"><span>Submitted mood board &amp; storyboard</span></div>
+    <div class="shot" style="height:470px"><img src="images/blender_props_crop.jpg" style="object-fit:contain;background:#0d2229"><span>Custom props modelled in Blender (script-generated)</span></div>
+    <div class="card">
+      <h3>Look &amp; feel</h3>
+      <p>Deep teal fog, mossy stone, bioluminescent cyan glyphs, amber Heart. Calm blue exploring, then amber/red panic once the Heart is taken. URP bloom, vignette, neutral tonemapping, fog and HDR emissive glows.</p>
+      <div style="display:flex;gap:12px;margin-top:10px">
+        <div class="sw" style="width:60px;height:36px;background:#0B1A2A;border:1px solid #2a4"></div><div class="sw" style="width:60px;height:36px;background:#0F4C5C"></div><div class="sw" style="width:60px;height:36px;background:#5E6B5A"></div><div class="sw" style="width:60px;height:36px;background:#3DF5E0"></div><div class="sw" style="width:60px;height:36px;background:#F2EFE6"></div><div class="sw" style="width:60px;height:36px;background:#FFB43A"></div><div class="sw" style="width:60px;height:36px;background:#FF4D4D"></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Free assets (CC0 / OFL)</h3>
+      <ul style="font-size:21px">
+        <li>Kenney Mini Dungeon (columns, rocks, pots) · Quaternius Animated Fish (shark, fish, manta)</li>
+        <li>ambientCG textures: Rock064, PavingStones138, Ground054</li>
+        <li>Kenney Interface &amp; Sci-Fi sounds · music "Aquaria" (cynicmusic), "Underwater Ambient Pad" (isaiah658)</li>
+        <li>Fonts Cinzel &amp; Exo 2 · full credits in <i>_DownloadedAssets/CREDITS.md</i></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>10</b> / 14</span></div>
+</section>
+
+<!-- 11. ARCHITECTURE -->
+<section class="slide">
+  <div class="head"><div class="num">10</div><div class="title">Technical Architecture</div><div class="kick">Unity 6.3 · C#</div></div>
+  <div class="body">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+      <div class="box"><h4>Core</h4><p><b>GameManager</b>: state, oxygen, score, sigils, escape timer, win/lose<br><b>GameSettings</b>: every tunable number<br><b>SaveSystem</b>: profiles, leaderboard, options<br><b>SFX</b>: music &amp; sound</p></div>
+      <div class="box"><h4>Player</h4><p><b>PlayerController</b>: Rigidbody swimming, boost, knock-back, banking, sonar<br><b>CameraFollow</b>: angled top-down follow, look-ahead, shake</p></div>
+      <div class="box"><h4>World</h4><p><b>Pickup</b> · <b>Gate</b> · <b>ExitZone</b> · <b>Hazard</b> · <b>CurrentZone</b> · <b>SharkPatrol</b> · <b>AirVent</b> · <b>CrackedWall</b> · <b>EscapeSequence</b> · Floater · Sway · FishSchool</p></div>
+      <div class="box"><h4>UI</h4><p><b>GameHUD</b>: HUD, intro, pause, help, end screen, popups<br><b>MainMenu</b>: name/profile, how to play, leaderboard, profile, options<br><b>UISound</b></p></div>
+    </div>
+    <div class="card" style="margin-top:28px;padding:24px 30px">
+      <h3>Content pipeline: the game is generated from code and data</h3>
+      <div class="pipe">
+        <div class="box"><h4>level_map.txt</h4><p>ASCII maze + legend</p></div><div class="arrow">+</div>
+        <div class="box"><h4>Blender script</h4><p>9 props → FBX</p></div><div class="arrow">+</div>
+        <div class="box"><h4>CC0 assets</h4><p>models · textures · audio</p></div><div class="arrow">→</div>
+        <div class="box" style="background:rgba(61,245,224,.12)"><h4>SanctumBuilder</h4><p>URP, materials, prefabs, both scenes, UI</p></div><div class="arrow">→</div>
+        <div class="box" style="background:rgba(255,180,58,.12);border-color:rgba(255,180,58,.5)"><h4>DrownedSanctum.exe</h4><p>BuildPipeline · Win64</p></div>
+      </div>
+      <p style="font-size:21px;margin-top:20px;color:#d6e8eb"><b class="c">build.ps1</b> (repo root) watches <i>Assets/ Packages/ ProjectSettings/</i> and rebuilds the exe automatically when code changes. Map or builder edits also regenerate the scenes. Rendering: URP Forward+, HDR, bloom, fog, no baked lighting, which suits integrated GPUs.</p>
+    </div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>11</b> / 14</span></div>
+</section>
+
+<!-- 12. TESTING -->
+<section class="slide">
+  <div class="head"><div class="num">11</div><div class="title">Testing &amp; Performance</div><div class="kick">Automated playtest</div></div>
+  <div class="body grid2">
+    <div class="card">
+      <h3>Automated full-run test (built exe)</h3>
+      <table>
+        <tr><td>Pearl collected, score +10</td><td class="ok">✓</td></tr>
+        <tr><td>Moon / Sun / Star sigils collected</td><td class="ok">✓</td></tr>
+        <tr><td>Moon / Sun / Star gates open with their sigil</td><td class="ok">✓</td></tr>
+        <tr><td>Shark &amp; urchin hits cost oxygen and points</td><td class="ok">✓</td></tr>
+        <tr><td>Air vent refill 40% → 91%</td><td class="ok">✓</td></tr>
+        <tr><td>Heart → escape timer, Star Gate slams</td><td class="ok">✓</td></tr>
+        <tr><td>Exit with Heart → WIN (score 715)</td><td class="ok">✓</td></tr>
+        <tr><td>Oxygen 0 → GAME OVER</td><td class="ok">✓</td></tr>
+        <tr><td>Profile + leaderboard saved and shown</td><td class="ok">✓</td></tr>
+      </table>
+      <p style="font-size:19px;color:var(--muted);margin-top:14px">Run with <i>DrownedSanctum.exe -autotest</i>: it teleports through every objective, logs the results and saves screenshots (used in this deck).</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:28px">
+      <div class="card">
+        <h3>Performance (1920 × 1080, vsync 60)</h3>
+        <table>
+          <tr><td>Main menu</td><td class="v">59 fps</td></tr>
+          <tr><td>Gameplay</td><td class="v">57 fps</td></tr>
+          <tr><td>Build size</td><td class="v">106 MB</td></tr>
+          <tr><td>Rebuild time (code change)</td><td class="v">≈ 25–40 s</td></tr>
+        </table>
+        <p style="font-size:20px;color:var(--muted);margin-top:12px">Test machine: Intel i7-1255U · Intel UHD integrated graphics · 16 GB RAM</p>
+      </div>
+      <div class="card">
+        <h3>Design choices for low-end GPUs</h3>
+        <p style="font-size:22px">Merged wall/floor meshes, no shadows, no baked GI, fog to limit view distance, emissive glows instead of many lights, FXAA instead of MSAA.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>12</b> / 14</span></div>
+</section>
+
+<!-- 13. RUNNING THE DEMO -->
+<section class="slide">
+  <div class="head"><div class="num">12</div><div class="title">Running the Demo</div><div class="kick">Evaluation guide</div></div>
+  <div class="body grid2">
+    <div class="card">
+      <h3>Demo script</h3>
+      <ul style="font-size:23px">
+        <li>Run <b class="c">Build/DrownedSanctum.exe</b>, type a name, press DIVE IN.</li>
+        <li>Show the HUD, collect a pearl, press <span class="key">Space</span> for sonar.</li>
+        <li>Grab the Moon Sigil and open the Moon Gate.</li>
+        <li>Touch an urchin: oxygen and score drop. Refill at a vent.</li>
+        <li>Take the Heart: alarm, 90 s timer, cracked wall opens.</li>
+        <li>Escape through the shaft to the entrance: win screen.</li>
+        <li>Back in the menu: Leaderboard, Profile, Options.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Live modifications</h3>
+      <table>
+        <tr><th>Request</th><th>Where</th></tr>
+        <tr><td>Change a score / speed / timer</td><td>Drowned Sanctum › Edit Game Settings</td></tr>
+        <tr><td>Change the maze</td><td>Assets/Level/level_map.txt</td></tr>
+        <tr><td>Change a mechanic</td><td>Assets/Scripts/World/*.cs</td></tr>
+        <tr><td>Win / lose / oxygen rules</td><td>GameManager.cs</td></tr>
+        <tr><td>Rebuild the exe</td><td>build.bat or Unity menu</td></tr>
+      </table>
+      <p style="font-size:20px;color:var(--muted);margin-top:16px">Example: set <i>escapeTime</i> 90 → 45 or <i>pearlScore</i> 10 → 25, press Play, and the change shows immediately.</p>
+    </div>
+  </div>
+  <div class="foot"><span>The Drowned Sanctum · FGD Final Lab</span><span><b>13</b> / 14</span></div>
+</section>
+
+<!-- 14. THANK YOU -->
+<section class="slide" style="background:#051019">
+  <img src="images/menu_bg.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55)">
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+    <div style="font-family:Cinzel;font-weight:900;font-size:120px;text-shadow:0 4px 0 rgba(3,16,24,.9),0 0 34px rgba(61,245,224,.35)">THANK YOU</div>
+    <div style="font-size:34px;margin:18px 0 40px;color:#dcebee">Find the Heart · Survive the Deep · Escape</div>
+    <div class="card" style="padding:26px 48px;font-size:28px;line-height:1.6">
+      <b>Repository:</b> <span style="color:var(--cyan)">github.com/qraza1100/FinalLabGame</span><br>
+      <b>Play:</b> Build/DrownedSanctum.exe &nbsp;·&nbsp; <b>Docs:</b> Documentation/<br>
+      <span style="color:var(--muted)">Syed Qaim Raza · CT-24190 · Game Development (FGD Lab)</span>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const map = [
+"###########################",
+"#2..#o....#k...k#..o#....3#",
+"##..#.##.##..H..c.#.#.###.#",
+"#o.#..#..o#o...o#.#...#...#",
+"#.##.##.###w...w#.####.#.##",
+"#....>>>..###X###S.......w#",
+"##.###.##.##...#####.##.###",
+"##.#V..#..##o^o##o.#.#..V.#",
+"##...#U#.###U.U##.##.#.####",
+"####.#...###.^.##....#...o#",
+"#o...#.#..##o.o###.#####.##",
+"##.###.#U.##.U.###.......U#",
+"##....w#..##^.^###.#U#.#.##",
+"####.#...###.o.##o.#...#..#",
+"####.########X##########.##",
+"#o.#.k#w..o.K.K.o..w#o#..k#",
+"##.#..#.1.........V.#.#.#.#",
+"#.....a...U.........b.....#",
+"#.###.#o.k...P...k.o#.##.##",
+"#o...w#r....w.w....r#o..V.#",
+"#############E#############"];
+  const S = {
+    '#':['#4f7f86',''], '.':['#06121a',''], 'P':['#33e0a8','P'], 'E':['#FFB43A','E'], 'H':['#FFB43A','♥'],
+    '1':['#3DF5E0','1'], '2':['#3DF5E0','2'], '3':['#3DF5E0','3'], 'a':['#1d8f86','A'], 'b':['#1d8f86','B'], 'c':['#1d8f86','C'],
+    'o':['#06121a','•'], 'V':['#06121a','◎'], 'U':['#06121a','✷'], '>':['#06121a','›'], '<':['#06121a','‹'], '^':['#06121a','˄'], 'v':['#06121a','˅'],
+    'S':['#5a1820','S'], 'X':['#7a4a22','X'], 'K':['#46555a','▪'], 'w':['#06121a',''], 'k':['#06121a',''], 'r':['#06121a','']
+  };
+  const col = {'o':'#F2EFE6','V':'#3DF5E0','U':'#ff6fa0','>':'#3DF5E0','<':'#3DF5E0','^':'#3DF5E0','v':'#3DF5E0','S':'#ff8a80','X':'#ffd0a0','K':'#cfd8d8','P':'#04201a','E':'#2a1600','H':'#2a1600','1':'#04201a','2':'#04201a','3':'#04201a','a':'#e9fffb','b':'#e9fffb','c':'#e9fffb'};
+  const el = document.getElementById('map');
+  el.style.gridTemplateColumns = 'repeat(' + map[0].length + ', 30px)';
+  for (const row of map) for (const ch of row) {
+    const d = document.createElement('div');
+    const s = S[ch] || S['.'];
+    d.style.background = s[0];
+    d.textContent = s[1];
+    d.style.color = col[ch] || '#fff';
+    if ('>v<^'.includes(ch)) d.style.fontSize = '22px';
+    el.appendChild(d);
+  }
+  const L = [['#4f7f86','','Wall'],['#33e0a8','P','Player start'],['#3DF5E0','1','Sigil (1 Moon, 2 Sun, 3 Star)'],['#1d8f86','A','Gate (A Moon, B Sun, C Star)'],
+             ['#FFB43A','♥','Heart of Eternity'],['#FFB43A','E','Exit / entrance gate'],['#06121a','•','Pearl'],['#06121a','◎','Air vent'],
+             ['#06121a','✷','Urchin'],['#06121a','›','Current (push direction)'],['#5a1820','S','Shark patrol'],['#7a4a22','X','Cracked wall (escape)']];
+  const lg = document.getElementById('legend');
+  for (const [bg, t, label] of L) {
+    const r = document.createElement('div');
+    const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = bg; sw.textContent = t;
+    sw.style.color = col[t === '♥' ? 'H' : t === '•' ? 'o' : t === '◎' ? 'V' : t === '✷' ? 'U' : t === '›' ? '>' : t] || '#04201a';
+    r.appendChild(sw); r.appendChild(document.createTextNode(label)); lg.appendChild(r);
+  }
+})();
+</script>
+</body>
+</html>

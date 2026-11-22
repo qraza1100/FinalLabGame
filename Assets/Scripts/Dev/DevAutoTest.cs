@@ -71,7 +71,8 @@ namespace DrownedSanctum
                 mm.ShowOptions(); yield return Wait(0.4f); yield return Shot("03_options");
                 mm.ShowBoard(); yield return Wait(0.4f); yield return Shot("04_board_before");
                 LogFps("menu");
-                mm.PlayAs("AutoTester");
+                int n = Array.IndexOf(Args, "-autotestName");
+                mm.PlayAs(n >= 0 && n + 1 < Args.Length ? Args[n + 1] : "AutoTester");
             }
             else
             {

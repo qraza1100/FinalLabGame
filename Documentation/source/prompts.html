@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Drowned Sanctum: AI Interaction Record (Prompts)</title>
+<style>
+@font-face{font-family:Cinzel;src:url(fonts/Cinzel.ttf) format('truetype');font-weight:400 900}
+@font-face{font-family:Exo2;src:url(fonts/Exo2.ttf) format('truetype');font-weight:100 900}
+@page{size:A4;margin:18mm 17mm 20mm 17mm;
+  @bottom-left{content:"The Drowned Sanctum · AI Interaction Record";font-family:Exo2,sans-serif;font-size:8.5pt;color:#6b8790}
+  @bottom-right{content:"Page " counter(page) " of " counter(pages);font-family:Exo2,sans-serif;font-size:8.5pt;color:#6b8790}}
+@page:first{margin:0;@bottom-left{content:none}@bottom-right{content:none}}
+:root{--navy:#0B1A2A;--teal:#0F4C5C;--cyan:#13a89a;--amber:#c97a0a;--ink:#1b2b33;--muted:#5d7780;--rule:#cfe3e4;--soft:#f1f8f8}
+html,body{margin:0}
+body{font-family:Exo2,'Segoe UI',sans-serif;color:var(--ink);font-size:10.5pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+h1,h2,h3{font-family:Cinzel,serif;color:var(--navy);margin:0}
+h2{font-size:17pt;margin:0 0 4mm;padding-bottom:2mm;border-bottom:1.5pt solid var(--cyan);break-after:avoid}
+h3{font-size:12.5pt;margin:0 0 2mm}
+p{margin:0 0 3mm}
+.section{margin-bottom:8mm}
+.new{break-before:page}
+table{border-collapse:collapse;width:100%;margin:2mm 0 4mm}
+th,td{border-bottom:.6pt solid var(--rule);padding:2mm 2.5mm;text-align:left;vertical-align:top;font-size:9.5pt}
+th{background:var(--teal);color:#fff;font-weight:700;font-size:9pt;letter-spacing:.04em}
+tr:nth-child(even) td{background:var(--soft)}
+td.n{width:9mm;font-weight:800;color:var(--teal);text-align:center}
+td.d{width:22mm;white-space:nowrap;color:var(--muted)}
+.entry{border:.8pt solid var(--rule);border-radius:3mm;margin:0 0 6mm;break-inside:auto;overflow:hidden}
+.entry .eh{display:flex;align-items:center;gap:4mm;background:linear-gradient(90deg,var(--navy),var(--teal));color:#fff;padding:3mm 4mm;break-after:avoid}
+.entry .eh .no{font-family:Cinzel;font-weight:900;font-size:16pt;color:#7ff3e6;min-width:12mm}
+.entry .eh .tt{font-family:Cinzel;font-weight:700;font-size:12pt;flex:1}
+.entry .eh .dt{font-size:8.5pt;opacity:.85;white-space:nowrap}
+.entry .eb{padding:3.5mm 4.5mm 1mm}
+.lbl{font-size:8pt;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin:2mm 0 1mm;break-after:avoid;page-break-after:avoid}
+tr,.quote,.out,li{break-inside:avoid}
+.quote{background:#fbf6ec;border-left:2.5pt solid var(--amber);padding:2.5mm 3.5mm;font-family:Consolas,'Courier New',monospace;font-size:9.2pt;line-height:1.45;white-space:pre-wrap;margin:0 0 2mm;color:#3a2a0a}
+.attach{font-size:9pt;color:var(--muted);font-style:italic;margin:0 0 2mm}
+ul{margin:0 0 2.5mm;padding-left:5.5mm}
+li{margin-bottom:1mm}
+li::marker{color:var(--cyan)}
+.out{background:var(--soft);border-radius:2mm;padding:2mm 3.5mm;margin:1mm 0 3mm;font-size:9.5pt}
+.out b{color:var(--teal)}
+.kv{display:grid;grid-template-columns:40mm 1fr;gap:1.2mm 4mm;font-size:10pt}
+.kv div:nth-child(odd){color:var(--muted);font-weight:700}
+/* cover */
+.cover{height:297mm;width:210mm;position:relative;overflow:hidden;break-after:page;background:#051019;color:#F2EFE6}
+.cover img{position:absolute;inset:0;width:100%;height:58%;object-fit:cover;opacity:.9}
+.cover .fade{position:absolute;left:0;right:0;top:30%;height:30%;background:linear-gradient(180deg,rgba(5,16,25,0),#051019)}
+.cover .ct{position:absolute;left:18mm;right:18mm;top:120mm}
+.cover .k{font-size:9pt;letter-spacing:.32em;color:#3DF5E0;font-weight:800}
+.cover h1{color:#F2EFE6;font-size:36pt;line-height:1.02;margin:5mm 0 3mm;font-weight:900}
+.cover .sub{font-size:14pt;color:#cfe3e6;margin-bottom:12mm}
+.cover .meta{display:grid;grid-template-columns:42mm 1fr;gap:2.4mm 5mm;font-size:10.5pt;border-top:.8pt solid rgba(61,245,224,.4);padding-top:6mm}
+.cover .meta div:nth-child(odd){color:#3DF5E0;font-weight:700;letter-spacing:.04em}
+.cover .gcr{position:absolute;left:18mm;right:18mm;bottom:16mm;font-size:9pt;color:#9fbcc3;border:.8pt solid rgba(61,245,224,.35);border-radius:2mm;padding:3mm 4mm}
+</style>
+</head>
+<body>
+
+<!-- ================= COVER ================= -->
+<div class="cover">
+  <img src="images/menu_bg.jpg">
+  <div class="fade"></div>
+  <div class="ct">
+    <div class="k">FINAL LAB PROJECT · SUBMISSION ITEM: PROMPTS</div>
+    <h1>AI Interaction Record<br>&amp; Prompt Log</h1>
+    <div class="sub">The Drowned Sanctum: a 3D top-down maze-escape game (Unity 6.3 · Blender 5.2)</div>
+    <div class="meta">
+      <div>Student</div><div>Syed Qaim Raza</div>
+      <div>Roll No.</div><div>CT-24190</div>
+      <div>Course</div><div>Game Development (FGD Lab)</div>
+      <div>AI assistant</div><div>Claude (Anthropic), model Claude Opus 5.5, used through the Claude Code desktop app</div>
+      <div>Period covered</div><div>19 – 22 November 2026</div>
+      <div>Repository</div><div>github.com/qraza1100/FinalLabGame</div>
+    </div>
+  </div>
+  <div class="gcr">This document records, in chronological order, every prompt given to the AI assistant during the project, together with the formal intent of each request, the work carried out and the resulting deliverables. Prompts are reproduced exactly as typed; long pasted course material is summarised.</div>
+</div>
+
+<!-- ================= 1. PURPOSE ================= -->
+<div class="section">
+  <h2>1. Purpose and Scope</h2>
+  <p>The final lab brief requires each student to build an original, complete and playable game from a given storyline, to submit a running executable and a GitHub repository, and to submit the <b>prompts</b> used with AI tools together with a <b>running demo / presentation</b> of the project. This document fulfils the "Prompts" item. The companion file <i>DrownedSanctum_Presentation.pdf</i> covers the presentation.</p>
+  <p>The interaction took place in one continuous AI-assisted development session. The student set the direction and constraints, approved downloads and publishing, and signed in to third-party services (Unity Hub, GitHub) personally. The assistant inspected the computer's set-up and then researched, designed, wrote code, generated assets, built, tested and documented the game.</p>
+  <div class="kv">
+    <div>Total prompts</div><div>9 prompts from the student, plus 4 recorded approvals and clarifications</div>
+    <div>Phases</div><div>Concept &amp; theme (19 Nov) · Mood board &amp; assets (19 Nov) · Full game build (22 Nov) · Repository &amp; automation (22 Nov) · Documentation (22 Nov)</div>
+    <div>Main result</div><div>Playable Windows build <i>Build/DrownedSanctum.exe</i>, full Unity project, mood board, automated build script and this documentation</div>
+  </div>
+</div>
+
+<!-- ================= 2. SUMMARY ================= -->
+<div class="section">
+  <h2>2. Summary of Prompts</h2>
+  <table>
+    <tr><th>#</th><th>Date</th><th>Request (summary)</th><th>Outcome</th></tr>
+    <tr><td class="n">1</td><td class="d">19 Nov 2026</td><td>Shared the assignment brief; asked whether a temple theme is mandatory.</td><td>Requirements explained; the theme is given separately and must be followed.</td></tr>
+    <tr><td class="n">2</td><td class="d">19 Nov 2026</td><td>Shared the official storyline (temple, Heart of Eternity).</td><td>Setting is free, storyline is fixed; four original settings proposed.</td></tr>
+    <tr><td class="n">3</td><td class="d">19 Nov 2026</td><td>Draft a game idea and mood board in chat, sized to the laptop and installed Unity / Blender.</td><td>Hardware audit; concept "The Drowned Sanctum"; text mood board; 2-week plan.</td></tr>
+    <tr><td class="n">4</td><td class="d">19 Nov 2026</td><td>Collect free assets for Unity and create a mood board (classmate's board as layout reference).</td><td>13 CC0/OFL files downloaded with approval; original mood board + storyboard (PNG, PDF).</td></tr>
+    <tr><td class="n">5</td><td class="d">22 Nov 2026</td><td>Complete the whole game in Unity using any available skills.</td><td>Full game built, tested automatically and exported as a Windows exe.</td></tr>
+    <tr><td class="n">6</td><td class="d">22 Nov 2026</td><td>Reported signing in to Unity Hub to refresh the licence.</td><td>Batch-mode builds unblocked; build continued.</td></tr>
+    <tr><td class="n">7</td><td class="d">22 Nov 2026</td><td>"Not yet": publishing to GitHub postponed.</td><td>No repository created at that time.</td></tr>
+    <tr><td class="n">8</td><td class="d">22 Nov 2026</td><td>Create a public GitHub repo, upload code and build, add an automatic build script.</td><td>build.ps1 / .bat added and tested; public repo created and pushed.</td></tr>
+    <tr><td class="n">9</td><td class="d">22 Nov 2026</td><td>Upload, then add a Documentation folder with a presentation PDF and a formal prompts PDF.</td><td>This document and the 14-slide presentation, committed to the repository.</td></tr>
+  </table>
+</div>
+
+<!-- ================= 3. DETAILED LOG ================= -->
+<h2 style="margin-top:4mm">3. Detailed Prompt Log</h2>
+
+<div class="entry">
+  <div class="eh"><div class="no">01</div><div class="tt">Understanding the assignment and its theme</div><div class="dt">19 Nov 2026 · Concept</div></div>
+  <div class="eb">
+    <div class="lbl">Prompt (as submitted)</div>
+    <div class="attach">[Attachment: the instructor's final-project brief covering the mood board / storyboard deadline of 19 Nov, originality rules, required scoring and player-profile system, win/lose conditions, executable and GitHub submission, and live modification during evaluation.]</div>
+    <div class="quote">now first tell me is it necessary to get along temple theme or something?</div>
+    <div class="lbl">Formal statement of the request</div>
+    <p>Interpret the assignment brief and confirm whether the game must follow a temple theme or whether the student may choose a different theme.</p>
+    <div class="lbl">AI response and actions</div>
+    <ul>
+      <li>Pointed out that the brief refers to a separately "given theme" and storyline, which must be followed but may be extended creatively.</li>
+      <li>Listed the requirements that apply to any theme: clear objective, short instructions, scoring and/or player profile, saved progress, win/lose conditions, an executable build, a GitHub repository and readiness for live changes.</li>
+      <li>Warned that the mood board / storyboard was due the same day.</li>
+    </ul>
+    <div class="out"><b>Outcome:</b> student asked to share the exact storyline before design began.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="eh"><div class="no">02</div><div class="tt">Clarifying the official storyline</div><div class="dt">19 Nov 2026 · Concept</div></div>
+  <div class="eb">
+    <div class="lbl">Prompt (as submitted)</div>
+    <div class="attach">[Attachment only: the official storyline. An explorer finds an old map to a jungle temple; the door seals behind them; they must navigate passages, locked doors, hidden keys, symbols and traps, reach the Heart of Eternity, and escape before the temple seals forever. Visual theme and environment are left free, but the central storyline is required.]</div>
+    <div class="lbl">Formal statement of the request</div>
+    <p>Determine, from the official storyline, which elements are mandatory and which are open to creative interpretation.</p>
+    <div class="lbl">AI response and actions</div>
+    <ul>
+      <li>Confirmed a temple setting is <b>not</b> mandatory; the fixed outline is: an explorer enters a mysterious place, faces challenges, gets through a maze and escapes.</li>
+      <li>Recommended keeping the artifact and the timed escape because they give a natural win condition and timer.</li>
+      <li>Proposed four original settings that fit the outline: a sunken underwater ruin, a clockwork castle, a frozen monastery and a light-and-mirror temple.</li>
+    </ul>
+    <div class="out"><b>Outcome:</b> underwater setting chosen as the most distinctive option for a class working from the same storyline.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="eh"><div class="no">03</div><div class="tt">Game concept and text mood board fitted to the hardware</div><div class="dt">19 Nov 2026 · Pre-production</div></div>
+  <div class="eb">
+    <div class="lbl">Prompt (as submitted)</div>
+    <div class="quote">so now first draft a mood board for a game and an idea for me in plain chat only by taking a look on my device specs and credebility of this with unity and blender as they are installed so that it can be realistic as per the time i have and possible in minimla</div>
+    <div class="lbl">Formal statement of the request</div>
+    <p>Inspect the student's computer and installed tools, then propose a realistic, minimal-scope game idea and a written mood board (in the chat only) that can be built with Unity and Blender in the time available.</p>
+    <div class="lbl">AI response and actions</div>
+    <ul>
+      <li>Read the hardware and software set-up: Intel Core i7-1255U, Intel UHD integrated graphics, 16 GB RAM, about 19 GB free on C: and 194 GB on D:, Unity 6000.3.24f1 with Windows Build Support, Blender 5.2.1.</li>
+      <li>Concluded that the integrated GPU is the main limit and recommended URP, fog, few real-time lights and no lightmap baking, with the project kept on D:.</li>
+      <li>Proposed <b>"The Drowned Sanctum"</b>: an explorer mini-sub, oxygen as life, three sigil keys, urchins / currents / a patrolling shark, the Heart of Eternity triggering a 90-second escape, scoring and a saved profile with leaderboard.</li>
+      <li>Wrote a text mood board (keywords, 7-colour palette, environment, lighting, sound, UI style, image search terms), a two-week plan and an ordered cut list.</li>
+    </ul>
+    <div class="out"><b>Outcome:</b> concept and scope agreed; basis for all later work.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="eh"><div class="no">04</div><div class="tt">Collecting free assets and producing the mood board</div><div class="dt">19 Nov 2026 · Pre-production</div></div>
+  <div class="eb">
+    <div class="lbl">Prompt (as submitted)</div>
+    <div class="attach">[Attachment: an image of a classmate's mood board, shared only as a layout reference.]</div>
+    <div class="quote">Collect the assets available online for free and the game will be in unity so just collect assets right now craft a mood board accordingly for reference i have added an image that one of our classmate submitted not surely but he forwaded.</div>
+    <div class="lbl">Formal statement of the request</div>
+    <p>Find free, Unity-compatible assets suitable for the game and download them; then design a mood board for the chosen concept, using the classmate's board only as a layout reference.</p>
+    <div class="lbl">AI response and actions</div>
+    <ul>
+      <li>Researched free sources: Kenney, Quaternius, ambientCG, OpenGameArt and Google Fonts. Previewed the candidates and checked their licences (CC0 / OFL).</li>
+      <li>Requested approval with the exact file list and sizes before downloading. The student chose "Download all".</li>
+      <li>Downloaded 13 files (about 40 MB), extracted them into categorised folders and wrote <i>CREDITS.md</i>.</li>
+      <li>Designed an original mood board and storyboard: vector illustrations, palette, game elements, a 6-frame storyboard, HUD mock-up, scoring and profile panels, and an asset panel using the real textures. Exported it as PNG (3840×2560) and PDF.</li>
+    </ul>
+    <div class="out"><b>Deliverables:</b> MoodBoard/DrownedSanctum_MoodBoard_CT-24190.png / .pdf · _DownloadedAssets/ with CREDITS.md</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="eh"><div class="no">05</div><div class="tt">Building the complete game in Unity</div><div class="dt">22 Nov 2026 · Production</div></div>
+  <div class="eb">
+    <div class="lbl">Prompt (as submitted)</div>
+    <div class="quote">complete the whole game in unity use any skill you want /skills</div>
+    <div class="lbl">Formal statement of the request</div>
+    <p>Implement the full game in Unity from the agreed concept, using any available tools, and deliver a playable build.</p>
+    <div class="lbl">AI response and actions</div>
+    <ul>
+      <li><b>Environment:</b> created a Unity 6.3 URP project using only packages already installed with the editor (no internet needed). Found that batch-mode builds need a signed-in Unity Hub.</li>
+      <li><b>3D models:</b> wrote a Blender Python script that models nine props (explorer sub, Heart of Eternity, sigil tablet, pearl, urchin, air vent, seaweed, coral, altar), exports them as FBX and saves <i>SanctumProps.blend</i>.</li>
+      <li><b>Level:</b> designed a 27×21 ASCII maze, then checked by a breadth-first-search script that every sigil, the Heart and the escape route can be reached in order.</li>
+      <li><b>Gameplay code (C#):</b> GameManager, GameSettings, SaveSystem, player movement and camera, pickups, gates, hazards, currents, shark AI, air vents, cracked walls, the escape sequence, HUD and menus.</li>
+      <li><b>Editor builder:</b> scripts that generate the URP settings, materials, prefabs, both scenes, all UI and the Windows build from code.</li>
+      <li><b>2D art:</b> generated glyphs, UI sprites and effects with Python/Pillow; rendered the menu background and app icon from the mood-board art.</li>
+      <li><b>Testing:</b> added an automated playtest mode that plays the whole game, logs results and captures screenshots. Fixed the problems found (menu background path, outline sprites, timer visibility, altar disappearing, layout overlaps, test data separation).</li>
+    </ul>
+    <div class="out"><b>Result:</b> Build/DrownedSanctum.exe (about 106 MB). Automated win and lose runs passed; 55–60 fps at 1920×1080 on the integrated GPU. README with an evaluation cheat-sheet.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="eh"><div class="no">06</div><div class="tt">Unity licence refresh</div><div class="dt">22 Nov 2026 · Production</div></div>
+  <div class="eb">
+    <div class="lbl">Prompt (as submitted)</div>
+    <div class="quote">unity wasnt signed i sigend it in right after you opened it fo rrefreshing liscence</div>
+    <div class="lbl">Formal statement of the request</div>
+    <p>Inform the assistant that Unity Hub has now been signed in so that the licence is valid, and continue the build.</p>
+    <div class="lbl">AI response and actions</div>
+    <ul>
+      <li>Re-ran the Unity batch-mode import, which then succeeded, and continued the production pipeline.</li>
+    </ul>
+    <div class="out"><b>Outcome:</b> licence issue resolved by the student's own sign-in.</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="eh"><div class="no">07</div><div class="tt">Decision to postpone publishing</div><div class="dt">22 Nov 2026 · Review</div></div>
+  <div class="eb">
+    <div class="lbl">Prompt (as submitted)</div>
+    <div class="quote">Not yet</div>
+    <div class="lbl">Formal statement of the request</div>
+    <p>Decline, for now, the offer to create a git repository and publish the project to GitHub.</p>
+    <div class="lbl">AI response and actions</div>
+    <ul><li>Left the project local and suggested playing several dives to tune difficulty values first.</li></ul>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="eh"><div class="no">08</div><div class="tt">Public repository and automatic build script</div><div class="dt">22 Nov 2026 · Release</div></div>
+  <div class="eb">
+    <div class="lbl">Prompt (as submitted)</div>
+    <div class="quote">create a github repo with same name and public status and upload the whole code along build and add a script to build the project if code changes automated in the parent directory</div>
+    <div class="lbl">Formal statement of the request</div>
+    <p>Create a public GitHub repository named <i>FinalLabGame</i>, upload the full project including the Windows build, and add a script at the project root that rebuilds the game automatically when the code changes.</p>
+    <div class="lbl">AI response and actions</div>
+    <ul>
+      <li>Wrote <i>build.ps1</i> with <i>build.bat</i> and <i>build-watch.bat</i> wrappers.
+        <ul>
+          <li>It snapshots every source file and builds only when something has changed.</li>
+          <li><i>-Watch</i> mode rebuilds a few seconds after a save.</li>
+          <li>Changes to the map or builder code also regenerate the scenes; other changes keep hand edits.</li>
+        </ul>
+      </li>
+      <li>Tested one-shot, "no change" and watch modes. Found and fixed a ten-minute hang caused by waiting on Unity's licensing helper process.</li>
+      <li>Updated <i>.gitignore</i> so the build is included and added <i>.gitattributes</i>.</li>
+      <li>After the student signed in to GitHub in the assistant's browser, created the public repository and pushed 636 files.</li>
+    </ul>
+    <div class="out"><b>Deliverables:</b> github.com/qraza1100/FinalLabGame · build.ps1 · build.bat · build-watch.bat</div>
+  </div>
+</div>
+
+<div class="entry">
+  <div class="eh"><div class="no">09</div><div class="tt">Documentation for submission</div><div class="dt">22 Nov 2026 · Documentation</div></div>
+  <div class="eb">
+    <div class="lbl">Prompt (as submitted)</div>
+    <div class="quote">first upload and create a folder of documentation in directory with two pdf one is presentation of game and second is prompts displaying our interaction in a formal manner on gcr it is asked {Prompts
+Running Demo / Presentation of Project}</div>
+    <div class="lbl">Formal statement of the request</div>
+    <p>Finish the upload first, then add a <i>Documentation</i> folder containing two PDFs required on Google Classroom: (1) a presentation of the game for the running demo, and (2) a formal record of the prompts and the interaction with the AI assistant.</p>
+    <div class="lbl">AI response and actions</div>
+    <ul>
+      <li>Completed the upload, then captured clean 1920×1080 screenshots with the automated playtest and rendered the Blender props.</li>
+      <li>Produced a 14-slide presentation covering concept, gameplay, scoring and profiles, level design, screenshots, art, architecture, testing and a demo guide.</li>
+      <li>Produced this prompt record. Both PDFs, their HTML sources and the screenshots were committed and pushed.</li>
+    </ul>
+    <div class="out"><b>Deliverables:</b> Documentation/DrownedSanctum_Presentation.pdf · Documentation/DrownedSanctum_Prompts.pdf · Documentation/screenshots/</div>
+  </div>
+</div>
+
+<!-- ================= 4. APPROVALS ================= -->
+<div class="section">
+  <h2>4. Approvals and Clarifications</h2>
+  <p>Wherever an action involved downloading files, signing in or publishing, the assistant stopped and asked first. These are the student's recorded answers:</p>
+  <table>
+    <tr><th>Date</th><th>Question from the assistant</th><th>Student's answer</th></tr>
+    <tr><td class="d">19 Nov 2026</td><td>Approve downloading 13 free asset files (listed with source, licence and size) into the project?</td><td>"Download all (Recommended)"</td></tr>
+    <tr><td class="d">22 Nov 2026</td><td>Unity batch mode reported no valid licence: sign in to Unity Hub.</td><td>Signed in personally (prompt 6)</td></tr>
+    <tr><td class="d">22 Nov 2026</td><td>Set up the git repository and push to GitHub?</td><td>"Not yet" (prompt 7)</td></tr>
+    <tr><td class="d">22 Nov 2026</td><td>Sign in to GitHub in the assistant's browser pane so the repository can be created.</td><td>"Signed in, continue" / "Signed in now, retry"</td></tr>
+  </table>
+</div>
+
+<!-- ================= 5. TOOLS ================= -->
+<div class="section">
+  <h2>5. Tools, Environment and Verification</h2>
+  <table>
+    <tr><th>Item</th><th>Details</th></tr>
+    <tr><td>Computer</td><td>HP 15s laptop · Intel Core i7-1255U · Intel UHD Graphics · 16 GB RAM · Windows 11 Pro</td></tr>
+    <tr><td>Game engine</td><td>Unity 6000.3.24f1 (Unity 6.3), Universal Render Pipeline 17.3, C#</td></tr>
+    <tr><td>3D modelling</td><td>Blender 5.2.1 LTS (Python script <i>Blender/build_sanctum_props.py</i>)</td></tr>
+    <tr><td>Supporting tools</td><td>Python 3.13 + Pillow (textures), Microsoft Edge headless (mood board and PDF rendering), Git 2.51, GitHub</td></tr>
+    <tr><td>AI assistant</td><td>Claude Opus 5.5 by Anthropic, in the Claude Code desktop app (file editing, terminal, built-in browser)</td></tr>
+    <tr><td>Verification</td><td>Automated playtest of the built exe (<i>-autotest</i>, <i>-autotestlose</i>), reachability check of the maze, frame-rate logging, screenshot review</td></tr>
+  </table>
+</div>
+
+<!-- ================= 6. DECLARATION ================= -->
+<div class="section">
+  <h2>6. Statement on AI Use</h2>
+  <p>This project was developed with substantial help from an AI assistant, as recorded above. The student set the goals, chose the concept direction, provided the course materials and reference image, approved every download and publication, and signed in to Unity Hub and GitHub personally. The assistant wrote the source code, the Blender modelling script, the build automation and the documents, and generated the original 2D art. All third-party assets are free (CC0 or SIL OFL) and are credited in <i>_DownloadedAssets/CREDITS.md</i>.</p>
+  <p>Everything in this record was reconstructed from the session transcript. Prompts appear exactly as typed, including spelling. The student remains responsible for reviewing, understanding and being able to explain and modify every part of the submitted project during the evaluation.</p>
+  <div style="margin-top:12mm;display:grid;grid-template-columns:1fr 1fr;gap:16mm">
+    <div style="border-top:.8pt solid var(--ink);padding-top:2mm;font-size:9.5pt">Student signature<br><span style="color:var(--muted)">Syed Qaim Raza · CT-24190</span></div>
+    <div style="border-top:.8pt solid var(--ink);padding-top:2mm;font-size:9.5pt">Date</div>
+  </div>
+</div>
+
+</body>
+</html>
