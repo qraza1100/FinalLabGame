@@ -1,0 +1,37 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #05121b; }
+    .cam { position: absolute; inset: 0; }
+    .cam video, .cam img { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; }
+    .flash { position: absolute; inset: 0; background: #ffffff; opacity: 0; pointer-events: none; }
+    .stamp { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; pointer-events: none; }
+    .stamp-card { position: absolute; font-family: "Archivo Black", sans-serif; text-transform: uppercase; line-height: 1;
+      padding: 16px 30px 20px; border: 6px solid #05121B; border-radius: 16px; box-shadow: 9px 9px 0 #05121B;
+      white-space: nowrap; transform-origin: 50% 50%; }
+    .stamp-card.good { background: #3DF5E0; color: #05121B; }
+    .stamp-card.bad { background: #FF4D4D; color: #ffffff; }
+    .stamp-card.plain { background: #F2EFE6; color: #05121B; }
+    .stamp-card.gag { background: #FFB43A; color: #05121B; }
+    .stamp-card.rewind { background: rgba(5,18,27,0.78); color: #F2EFE6; border-color: #F2EFE6; box-shadow: none; letter-spacing: 0.06em; }
+    .rw-tri { display: inline-block; width: 0; height: 0; border-top: 26px solid transparent; border-bottom: 26px solid transparent;
+      border-right: 40px solid #F2EFE6; margin-right: 4px; vertical-align: -6px; }
+  </style>
+  <div id="root" data-composition-id="dive" data-width="1920" data-height="1080">
+    <div class="cam" id="dive-menu-cam" style="z-index:1; transform-origin:368px 608px;">
+      <video id="dive-menu" class="clip" src="assets/footage/m01_menu_type.mp4" data-start="0" data-duration="1.685" data-media-start="0" data-track-index="1" muted playsinline></video>
+    </div>
+    <div class="cam" id="dive-crane-cam" style="z-index:2; transform-origin:960px 560px;">
+      <video id="dive-crane" class="clip" src="assets/footage/g02_crane.mp4" data-start="1.685" data-duration="2.065" data-media-start="0.9" data-playback-rate="1.1" data-track-index="2" muted playsinline></video>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#dive-menu-cam", { scale: 1.0, x: 0, y: 0 }, 0);
+      tl.fromTo("#dive-menu-cam", { scale: 1.0 }, { scale: 6.0, duration: 0.28, ease: "power3.in" }, 1.405);
+      tl.set("#dive-crane-cam", { scale: 1.3, x: 0, y: 0 }, 0);
+      tl.fromTo("#dive-crane-cam", { scale: 1.3 }, { scale: 1.0, duration: 0.4, ease: "power3.out" }, 1.685);
+      window.__timelines["dive"] = tl;
+    })();
+  </script>
+</template>

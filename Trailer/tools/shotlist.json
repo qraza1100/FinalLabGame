@@ -1,0 +1,347 @@
+{
+ "fps": 30,
+ "quality": 92,
+ "shots": [
+  {
+   "name": "m01_menu_type",
+   "action": "menu_type",
+   "text": "QAIM",
+   "duration": 2.4
+  },
+  {
+   "name": "dive",
+   "action": "menu_dive",
+   "text": "QAIM",
+   "record": false
+  },
+  {
+   "name": "g01_intro",
+   "action": "intro",
+   "duration": 1.6
+  },
+  {
+   "name": "g02_crane",
+   "action": "swim",
+   "path": [
+    39.0,
+    6.0,
+    39.0,
+    6.0
+   ],
+   "duration": 3.2,
+   "tail": 3.2,
+   "hud": false,
+   "camA": [
+    0,
+    42,
+    -16
+   ],
+   "camB": [
+    0,
+    15,
+    -8
+   ],
+   "oxygen": 100
+  },
+  {
+   "name": "g03_sonar_pearl_sigil",
+   "action": "swim",
+   "path": [
+    39.0,
+    6.0,
+    33.0,
+    6.0,
+    33.0,
+    12.0,
+    30.0,
+    12.0,
+    30.0,
+    15.0,
+    24.0,
+    15.0,
+    24.0,
+    12.0
+   ],
+   "sonarAt": 0.4,
+   "duration": 8.5,
+   "tail": 1.0,
+   "oxygen": 100
+  },
+  {
+   "name": "g04_moon_gate",
+   "action": "swim",
+   "path": [
+    27.0,
+    9.0,
+    12.0,
+    9.0,
+    12.0,
+    18.0
+   ],
+   "duration": 7.8999999999999995,
+   "tail": 0.5,
+   "camA": [
+    0,
+    15,
+    -8
+   ],
+   "camB": [
+    0,
+    11,
+    -6
+   ],
+   "oxygen": 95
+  },
+  {
+   "name": "g05_current",
+   "action": "swim",
+   "path": [
+    27.0,
+    45.0,
+    6.0,
+    45.0
+   ],
+   "duration": 5.0,
+   "tail": 0.5,
+   "oxygen": 90
+  },
+  {
+   "name": "g06_urchin",
+   "action": "swim",
+   "path": [
+    15.0,
+    39.0,
+    18.0,
+    39.0,
+    18.0,
+    36.0
+   ],
+   "duration": 2.6,
+   "tail": 1.0,
+   "camA": [
+    0,
+    13,
+    -7
+   ],
+   "camB": [
+    0,
+    10,
+    -5.5
+   ],
+   "oxygen": 72
+  },
+  {
+   "name": "g07_vent",
+   "action": "swim",
+   "path": [
+    18.0,
+    39.0,
+    12.0,
+    39.0
+   ],
+   "duration": 4.0,
+   "tail": 2.6,
+   "camA": [
+    0,
+    12,
+    -6.5
+   ],
+   "camB": [
+    0,
+    9.5,
+    -5
+   ],
+   "oxygen": 28
+  },
+  {
+   "name": "g08_sun_sigil",
+   "action": "swim",
+   "path": [
+    9.0,
+    54.0,
+    6.0,
+    54.0,
+    6.0,
+    57.0,
+    3.0,
+    57.0
+   ],
+   "duration": 4.2,
+   "tail": 1.0,
+   "oxygen": 90
+  },
+  {
+   "name": "g09_sun_gate",
+   "action": "swim",
+   "path": [
+    51.0,
+    9.0,
+    69.0,
+    9.0,
+    69.0,
+    15.0
+   ],
+   "duration": 7.8999999999999995,
+   "tail": 0.4,
+   "oxygen": 90
+  },
+  {
+   "name": "g10_shark",
+   "action": "swim",
+   "path": [
+    69.0,
+    42.0,
+    69.0,
+    45.0,
+    54.0,
+    45.0
+   ],
+   "duration": 4.2,
+   "tail": 0.6,
+   "camA": [
+    0,
+    13,
+    -7
+   ],
+   "camB": [
+    0,
+    15,
+    -8
+   ],
+   "oxygen": 95
+  },
+  {
+   "name": "g11_star_sigil",
+   "action": "swim",
+   "path": [
+    75.0,
+    51.0,
+    75.0,
+    57.0
+   ],
+   "duration": 2.6,
+   "tail": 1.0,
+   "oxygen": 90
+  },
+  {
+   "name": "g12_heart_reveal",
+   "action": "swim",
+   "path": [
+    51.0,
+    51.0,
+    51.0,
+    54.0,
+    45.0,
+    54.0
+   ],
+   "duration": 4.4,
+   "tail": 1.6,
+   "hud": false,
+   "camA": [
+    0,
+    13,
+    -9
+   ],
+   "camB": [
+    -3.5,
+    6.0,
+    -7.5
+   ],
+   "oxygen": 90
+  },
+  {
+   "name": "g13_take_heart",
+   "action": "swim",
+   "path": [
+    45.0,
+    54.0,
+    39.0,
+    54.0
+   ],
+   "duration": 5.2,
+   "tail": 3.6,
+   "camA": [
+    0,
+    13,
+    -6.5
+   ],
+   "camB": [
+    0,
+    20,
+    -10
+   ],
+   "oxygen": 85
+  },
+  {
+   "name": "g14_escape",
+   "action": "swim",
+   "path": [
+    39.0,
+    51.0,
+    39.0,
+    33.0,
+    42.0,
+    33.0,
+    42.0,
+    24.0,
+    39.0,
+    24.0,
+    39.0,
+    9.0
+   ],
+   "boost": true,
+   "duration": 9.0,
+   "tail": 0.4,
+   "oxygen": 80
+  },
+  {
+   "name": "g15_exit_win",
+   "action": "swim",
+   "path": [
+    39.0,
+    9.0,
+    39.0,
+    0.0,
+    39.0,
+    -1.6
+   ],
+   "boost": true,
+   "duration": 6.5,
+   "tail": 3.2,
+   "oxygen": 70
+  },
+  {
+   "name": "restart",
+   "action": "restart",
+   "record": false
+  },
+  {
+   "name": "g16_lose",
+   "action": "swim",
+   "path": [
+    33.0,
+    9.0,
+    33.0,
+    9.0
+   ],
+   "duration": 3.6,
+   "tail": 3.6,
+   "oxygen": 2.5
+  },
+  {
+   "name": "menu",
+   "action": "to_menu",
+   "record": false
+  },
+  {
+   "name": "m02_board",
+   "action": "board",
+   "duration": 2.2
+  },
+  {
+   "name": "m03_profile",
+   "action": "profile",
+   "duration": 1.8
+  }
+ ]
+}

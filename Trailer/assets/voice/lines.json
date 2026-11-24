@@ -1,0 +1,209 @@
+[
+ {
+  "id": "v01",
+  "text": "P.O.V.: you just stole the Heart of Eternity.",
+  "dur": 2.709,
+  "sil_starts": [
+   0.799375,
+   2.608083
+  ],
+  "sil_ends": [
+   1.128292,
+   2.709333
+  ]
+ },
+ {
+  "id": "v02",
+  "text": "And the temple wants it back.",
+  "dur": 1.387,
+  "sil_starts": [
+   1.281667
+  ],
+  "sil_ends": [
+   1.386667
+  ]
+ },
+ {
+  "id": "v03",
+  "text": "Okay. Rewind.",
+  "dur": 1.173,
+  "sil_starts": [
+   0.485042,
+   1.06225
+  ],
+  "sil_ends": [
+   0.581833,
+   1.173333
+  ]
+ },
+ {
+  "id": "v04",
+  "text": "Type your name. Dive in.",
+  "dur": 1.429,
+  "sil_starts": [
+   0.704083,
+   1.284167
+  ],
+  "sil_ends": [
+   0.841292,
+   1.429333
+  ]
+ },
+ {
+  "id": "v05",
+  "text": "Your air drains every second.",
+  "dur": 1.643,
+  "sil_starts": [
+   1.523875
+  ],
+  "sil_ends": [
+   1.642667
+  ]
+ },
+ {
+  "id": "v06",
+  "text": "Lost? Ping the sonar.",
+  "dur": 1.451,
+  "sil_starts": [
+   0.485,
+   1.332167
+  ],
+  "sil_ends": [
+   0.595542,
+   1.450667
+  ]
+ },
+ {
+  "id": "v07",
+  "text": "Pearls are points.",
+  "dur": 1.067,
+  "sil_starts": [
+   0.916375
+  ],
+  "sil_ends": [
+   1.066667
+  ]
+ },
+ {
+  "id": "v08",
+  "text": "Sigils open gates.",
+  "dur": 1.323,
+  "sil_starts": [
+   1.221458
+  ],
+  "sil_ends": [
+   1.322667
+  ]
+ },
+ {
+  "id": "v09",
+  "text": "Currents push. Urchins sting.",
+  "dur": 1.749,
+  "sil_starts": [
+   0.753208,
+   1.628833
+  ],
+  "sil_ends": [
+   0.910542,
+   1.749333
+  ]
+ },
+ {
+  "id": "v10",
+  "text": "Vents keep you breathing.",
+  "dur": 1.301,
+  "sil_starts": [
+   1.178458
+  ],
+  "sil_ends": [
+   1.301333
+  ]
+ },
+ {
+  "id": "v11",
+  "text": "And the shark? Not friendly.",
+  "dur": 1.515,
+  "sil_starts": [
+   0.652208,
+   1.381
+  ],
+  "sil_ends": [
+   0.755375,
+   1.514667
+  ]
+ },
+ {
+  "id": "v12",
+  "text": "Three sigils. One Heart.",
+  "dur": 1.6,
+  "sil_starts": [
+   0.0,
+   0.807792,
+   1.489833
+  ],
+  "sil_ends": [
+   0.0892083,
+   0.899583,
+   1.6
+  ]
+ },
+ {
+  "id": "v13",
+  "text": "Grab it, and the clock starts.",
+  "dur": 1.536,
+  "sil_starts": [
+   1.432792
+  ],
+  "sil_ends": [
+   1.536
+  ]
+ },
+ {
+  "id": "v14",
+  "text": "Ninety seconds. Go!",
+  "dur": 1.429,
+  "sil_starts": [
+   0.882958,
+   1.310083
+  ],
+  "sil_ends": [
+   0.990333,
+   1.429333
+  ]
+ },
+ {
+  "id": "v15",
+  "text": "You made it out.",
+  "dur": 0.917,
+  "sil_starts": [
+   0.786292
+  ],
+  "sil_ends": [
+   0.917333
+  ]
+ },
+ {
+  "id": "v16",
+  "text": "Now beat the leaderboard.",
+  "dur": 1.365,
+  "sil_starts": [
+   1.255667
+  ],
+  "sil_ends": [
+   1.365333
+  ]
+ },
+ {
+  "id": "v17",
+  "text": "The Drowned Sanctum. Dive in.",
+  "dur": 1.792,
+  "sil_starts": [
+   0.944208,
+   1.67275
+  ],
+  "sil_ends": [
+   1.164708,
+   1.792
+  ]
+ }
+]

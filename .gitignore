@@ -43,3 +43,13 @@ desktop.ini
 # Blender backups
 *.blend1
 *.blend2
+
+# Trailer (HyperFrames): regenerable footage, renders and caches stay local
+/Trailer/assets/footage/
+/Trailer/renders/
+/Trailer/.hyperframes/
+/Trailer/.media/
+/Trailer/node_modules/
+/Trailer/.thumbnails/
+/Trailer/.transcode-cache/
+/Trailer/.waveform-cache/

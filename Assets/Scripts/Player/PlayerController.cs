@@ -22,6 +22,11 @@ namespace DrownedSanctum
         float yaw, prevYaw, bank, sonarShow, ringT = 1f;
         Material arrowMat, ringMat;
 
+        // Autopilot used only by the trailer capture (DevCapture); normal play never sets these.
+        public static bool BotActive;
+        public static Vector3 BotMove;
+        public static bool BotBoost;
+
         public bool Boosting { get; private set; }
         public Vector3 Velocity => rb ? rb.linearVelocity : Vector3.zero;
 
@@ -55,9 +60,10 @@ namespace DrownedSanctum
             {
                 float h = Input.GetAxisRaw("Horizontal");
                 float v = Input.GetAxisRaw("Vertical");
-                moveInput = Vector3.ClampMagnitude(new Vector3(h, 0f, v), 1f);
+                moveInput = BotActive ? Vector3.ClampMagnitude(BotMove, 1f) : Vector3.ClampMagnitude(new Vector3(h, 0f, v), 1f);
                 bool was = Boosting;
-                Boosting = (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && moveInput.sqrMagnitude > 0.05f;
+                bool wantBoost = BotActive ? BotBoost : (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
+                Boosting = wantBoost && moveInput.sqrMagnitude > 0.05f;
                 if (Boosting && !was) SFX.Play(s => s.boost, 0.3f);
                 if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Q))
                     if (gm.TrySonar()) ShowSonar();

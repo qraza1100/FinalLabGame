@@ -1,0 +1,118 @@
+{
+ "click.mp3": {
+  "peak": 0.073,
+  "dur": 0.366
+ },
+ "game_boost.wav": {
+  "peak": 0,
+  "dur": 0.344
+ },
+ "game_collapse.wav": {
+  "peak": 0.229,
+  "dur": 2
+ },
+ "game_gate_close.wav": {
+  "peak": 0.53,
+  "dur": 0.533
+ },
+ "game_gate_open.wav": {
+  "peak": 0,
+  "dur": 0.529
+ },
+ "game_hit.wav": {
+  "peak": 0.002,
+  "dur": 0.471
+ },
+ "game_lose.wav": {
+  "peak": 0.016,
+  "dur": 0.139
+ },
+ "game_pickup_heart.wav": {
+  "peak": 0.064,
+  "dur": 0.38
+ },
+ "game_pickup_pearl.wav": {
+  "peak": 0,
+  "dur": 0.122
+ },
+ "game_pickup_sigil.wav": {
+  "peak": 0,
+  "dur": 0.539
+ },
+ "game_sonar.wav": {
+  "peak": 3.551,
+  "dur": 5
+ },
+ "game_vent.wav": {
+  "peak": 0.136,
+  "dur": 0.953
+ },
+ "game_win.wav": {
+  "peak": 0,
+  "dur": 0.12
+ },
+ "glitch-1.mp3": {
+  "peak": 0.82,
+  "dur": 2.638
+ },
+ "impact-bass-1.mp3": {
+  "peak": 0.073,
+  "dur": 2.116
+ },
+ "impact-bass-2.mp3": {
+  "peak": 1.986,
+  "dur": 2.592
+ },
+ "key-press.mp3": {
+  "peak": 0.076,
+  "dur": 0.4
+ },
+ "ping.mp3": {
+  "peak": 0.324,
+  "dur": 1.32
+ },
+ "pop.mp3": {
+  "peak": 0.12,
+  "dur": 0.72
+ },
+ "rewind.wav": {
+  "peak": 1.019,
+  "dur": 1.75
+ },
+ "riser.mp3": {
+  "peak": 3.472,
+  "dur": 10.032
+ },
+ "scratch.wav": {
+  "peak": 0.181,
+  "dur": 0.36
+ },
+ "sparkle.mp3": {
+  "peak": 0.027,
+  "dur": 1.802
+ },
+ "typing.mp3": {
+  "peak": 0.457,
+  "dur": 1.5
+ },
+ "whoosh-cinematic.mp3": {
+  "peak": 2.503,
+  "dur": 5.544
+ },
+ "whoosh-hi.wav": {
+  "peak": 0.144,
+  "dur": 0.513
+ },
+ "whoosh-low.wav": {
+  "peak": 0.184,
+  "dur": 0.653
+ },
+ "whoosh-short.mp3": {
+  "peak": 0.162,
+  "dur": 0.575
+ },
+ "whoosh.mp3": {
+  "peak": 0.162,
+  "dur": 0.575
+ }
+}

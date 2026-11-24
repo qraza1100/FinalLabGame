@@ -50,7 +50,7 @@ namespace DrownedSanctum
     {
         // The automated playtest uses its own slot so it never touches real players' scores.
         public const string AutotestSaveKey = "DrownedSanctum.Save.autotest";
-        static string SaveKey => DevAutoTest.Enabled ? AutotestSaveKey : "DrownedSanctum.Save.v1";
+        static string SaveKey => DevAutoTest.Enabled || DevCapture.Enabled ? AutotestSaveKey : "DrownedSanctum.Save.v1";
         public const int LeaderboardSize = 10;
         public static readonly string[] DifficultyNames = { "Easy", "Normal", "Hard" };
 

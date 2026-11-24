@@ -1,0 +1,60 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #05121b; }
+    .cam { position: absolute; inset: 0; }
+    .cam video, .cam img { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; object-fit: cover; }
+    .flash { position: absolute; inset: 0; background: #ffffff; opacity: 0; pointer-events: none; }
+    .stamp { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; pointer-events: none; }
+    .stamp-card { position: absolute; font-family: "Archivo Black", sans-serif; text-transform: uppercase; line-height: 1;
+      padding: 16px 30px 20px; border: 6px solid #05121B; border-radius: 16px; box-shadow: 9px 9px 0 #05121B;
+      white-space: nowrap; transform-origin: 50% 50%; }
+    .stamp-card.good { background: #3DF5E0; color: #05121B; }
+    .stamp-card.bad { background: #FF4D4D; color: #ffffff; }
+    .stamp-card.plain { background: #F2EFE6; color: #05121B; }
+    .stamp-card.gag { background: #FFB43A; color: #05121B; }
+    .stamp-card.rewind { background: rgba(5,18,27,0.78); color: #F2EFE6; border-color: #F2EFE6; box-shadow: none; letter-spacing: 0.06em; }
+    .rw-tri { display: inline-block; width: 0; height: 0; border-top: 26px solid transparent; border-bottom: 26px solid transparent;
+      border-right: 40px solid #F2EFE6; margin-right: 4px; vertical-align: -6px; }
+  </style>
+  <div id="root" data-composition-id="payoff" data-width="1920" data-height="1080">
+    <div class="cam" id="p-grab-cam" style="z-index:1; transform-origin:1110px 520px;">
+      <video id="p-grab" class="clip" src="assets/footage/g13_take_heart.mp4" data-start="0" data-duration="1.875" data-media-start="0.38" data-track-index="1" muted playsinline></video>
+    </div>
+    <div class="cam" id="p-escape-cam" style="z-index:2; transform-origin:960px 560px;">
+      <video id="p-escape" class="clip" src="assets/footage/g14_escape.mp4" data-start="1.875" data-duration="3.75" data-media-start="0" data-playback-rate="1.76" data-track-index="2" muted playsinline></video>
+    </div>
+    <div class="cam" id="p-win-cam" style="z-index:3; transform-origin:960px 540px;">
+      <video id="p-win" class="clip" src="assets/footage/g15_exit_win.mp4" data-start="5.625" data-duration="2.345" data-media-start="0.6" data-track-index="3" muted playsinline></video>
+    </div>
+    <div class="cam" id="p-board-cam" style="z-index:4; transform-origin:960px 430px;">
+      <video id="p-board" class="clip" src="assets/footage/m02_board.mp4" data-start="7.97" data-duration="1.87" data-media-start="0.3" data-track-index="4" muted playsinline></video>
+    </div>
+    <div class="flash clip" id="payoff-flash0" data-start="0.55" data-duration="0.2" data-track-index="5" style="z-index:5;"><div class="flash" id="payoff-flash0-in"></div></div>
+    <div class="flash clip" id="payoff-flash1" data-start="2.89" data-duration="0.2" data-track-index="6" style="z-index:6;"><div class="flash" id="payoff-flash1-in"></div></div>
+    <div class="flash clip" id="payoff-flash2" data-start="6.155" data-duration="0.2" data-track-index="7" style="z-index:7;"><div class="flash" id="payoff-flash2-in"></div></div>
+    <div class="stamp clip" id="st-score" data-start="7" data-duration="0.95" data-track-index="8" style="z-index:8;"><div class="stamp-card gag" id="st-score-card" style="left:1400px; top:140px; font-size:62px;">SCORE 670</div></div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#p-grab-cam", { scale: 1.35, x: 0, y: 0 }, 0);
+      tl.fromTo("#p-grab-cam", { scale: 1.35 }, { scale: 1.0, duration: 0.32, ease: "power3.out" }, 0.55);
+      tl.to("#p-grab-cam", { keyframes: [{x: 18, y: -10, duration: 0.033}, {x: -15, y: 9, duration: 0.033}, {x: 11, y: -6, duration: 0.033}, {x: -7, y: 4, duration: 0.033}, {x: 3, y: -2, duration: 0.033}, {x: 0, y: 0, duration: 0.04}] }, 0.55);
+      tl.set("#p-escape-cam", { scale: 1.0, x: 0, y: 0 }, 0);
+      tl.fromTo("#p-escape-cam", { scale: 1.0 }, { scale: 1.18, duration: 0.12, ease: "power3.out" }, 2.89);
+      tl.fromTo("#p-escape-cam", { scale: 1.18 }, { scale: 1.0, duration: 0.5, ease: "power3.out" }, 3.05);
+      tl.to("#p-escape-cam", { keyframes: [{x: 18, y: -10, duration: 0.033}, {x: -15, y: 9, duration: 0.033}, {x: 11, y: -6, duration: 0.033}, {x: -7, y: 4, duration: 0.033}, {x: 3, y: -2, duration: 0.033}, {x: 0, y: 0, duration: 0.04}] }, 2.89);
+      tl.set("#p-win-cam", { scale: 1.0, x: 0, y: 0 }, 0);
+      tl.fromTo("#p-win-cam", { scale: 1.0 }, { scale: 1.3, duration: 0.3, ease: "power3.out" }, 6.65);
+      tl.set("#p-board-cam", { scale: 1.0, x: 0, y: 0 }, 0);
+      tl.fromTo("#p-board-cam", { x: 320 }, { x: 0, duration: 0.2, ease: "power3.out" }, 7.97);
+      tl.fromTo("#p-board-cam", { scale: 1.0 }, { scale: 1.32, duration: 0.28, ease: "power3.out" }, 8.35);
+      tl.fromTo("#payoff-flash0-in", { opacity: 0.85 }, { opacity: 0, duration: 0.18, ease: "power2.out" }, 0.55);
+      tl.fromTo("#payoff-flash1-in", { opacity: 0.85 }, { opacity: 0, duration: 0.18, ease: "power2.out" }, 2.89);
+      tl.fromTo("#payoff-flash2-in", { opacity: 0.85 }, { opacity: 0, duration: 0.18, ease: "power2.out" }, 6.155);
+      tl.fromTo("#st-score-card", { scale: 1.7, rotate: 3, opacity: 0 }, { scale: 1, rotate: -5, opacity: 1, duration: 0.14, ease: "expo.out" }, 7);
+      tl.to("#st-score-card", { scale: 0.85, opacity: 0, duration: 0.07, ease: "power3.in" }, 7.87);
+      window.__timelines["payoff"] = tl;
+    })();
+  </script>
+</template>

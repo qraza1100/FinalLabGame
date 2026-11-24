@@ -40,6 +40,7 @@ namespace DrownedSanctum
 
         IEnumerator Start()
         {
+            if (DevCapture.Enabled) { DevCapture.Boot(); yield break; }
             if (!Enabled) yield break;
             Directory.CreateDirectory(OutDir);
             string scene = SceneManager.GetActiveScene().name;
